@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP0373_AC3</title>
+    <style>
+      h1 {
+        padding: 15px;
+        font-family: 'Gill Sans MT',;
+        font-size: 40px;
+        color: #030003;
+        font-style: italic;
+        text-align: left;
+      }
+      
+      fieldset {
+        padding: 15px;
+        border-radius: 25px;
+        width: 350px;
+        background: linear-gradient(to left, #f0f2f3, #dfb0e9);
+        border: 3px solid #a5a3a3d0;
+        margin-bottom: 20px;
+        outline-offset: 5px;
+      }
+
+      fieldset legend {
+      font-weight: bold;
+      font-size: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #080808d0;
+      align-items: center;
+
+    }
+    </style>
+</head>
+<body>
+    <h1>Formulario Básico</h1>
+    <!-- FORMSPREE sino tenim XAMPP -->
+    <form action="https://formspree.io/f/mwprqylo" method="POST">
+       <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
+        <br></br>
+        <label for="Edad">Edad:</label>
+        <input type="number" id="Edad" name="Edad"">
+        <br></br>
+        <label for="fecha">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" value="18" valuemax="120">
+        <br></br>
+        <label for="pais">País:</label>
+            <select name="pais" id="pais">
+              <option value="España">España</option>
+              <option value="México">México</option>
+              <option value="Canada">Canada</option>
+              <option value="China">China</option>        
+              <option value="Japon">Japón</option>
+            </select>
+        </label>
+        <br></br>
+        <label>Género:</label>
+        <input type="radio" id="masculino" name="genero" value="Masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="femenino" name="genero" value="Femenino">
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="otro" name="genero" value="Otro">
+        <label for="otro">Otro</label>
+        </fieldset>
+        <fieldset>
+        <legend>Datos de Acceso</legend>
+        <input type="email" id="email" name="email" placeholder="Email" minlength="3">
+        <br></br>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" 
+        pattern="(?=.*[0-9])(?=.*[A-Za-z]).{6,}" required>
+        </fieldset>
+        <fieldset>
+        <legend>Preferencias</legend>
+        <label>Nivel de satisfacción (0-10)</label>
+        <div class="slidercontainer">
+          <input type="range" min="0" max="10" value="0"></div>
+        <label>Color favorito</label></labl>
+        <input type="color"></input>
+        <br></br>
+        <label>URL personal</label>
+        <input type="url" name="url" placeholder="http://tusitio.com"></input>
+       </fieldset>
+       <fieldset>
+        <legend>Archivo y Comentarios</legend>
+        <label>Subir archivo (solo imágenes):</label>
+        <input type="file" id="imagenUpload" accept="image/*">
+        <br></br>
+        <label>Comentarios:</label>
+        <textarea name="Comentarios" id="Comment" weight="6"></textarea>
+       </fieldset>
+       <fieldset>
+       <legend>Acciones</legend>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Enviar">
+       </fieldset>
+    </form>
+</body>
+</html>
