@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #e9b58b;
+  font-family: "Doto";
+  color: #333;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-image: url('/assets/wall.jpg');
+  background-size: 20%;
+  background-repeat: repeat;
+  color: white;
+
+  counter-reset: encerts;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-image: url('assets/tejado.jpg');
+  background-size: 20%;
+  background-repeat: repeat;
+  color: white;
+}
+
+ul.fachada {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+}
+
+
+.fachada .ventana {
+  width: 150px;
+  height: 150px;
+  list-style: none;
+  outline: 5px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: radial-gradient(circle,
+      rgba(252, 189, 70, 1) 0%,
+      rgba(0, 0, 0, 1) 60%);
+}
+
+.fachada .ventana .ladron {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  /* transform: translateX(-50%); */
+  width: 100px;
+  height: 100px;
+  appearance: none;
+  background-image: url('/assets/ladron.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: filter 1s linear;
+  cursor: pointer;
+
+}
+
+.fachada .ventana .ladron:checked {
+  filter: opacity(0.8) hue-rotate(180deg);
+  counter-increment: encerts;
+  animation: amagar-lladre 2s ease-in-out infinite;
+
+}
+
+.fachada .ventana .ladron:checked::after {
+  content: "+1!";
+  position: absolute;
+  top: 60px;
+  left: 80%;
+  transform: translateX(-50%);
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.2em;
+  pointer-events: none;
+}
+
+@keyframes amagar-lladre {
+  0% {
+    top: 0;
+  }
+
+  25% {
+    top: 40%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+ul.fachada li:nth-child(1) .ladron {
+  animation-duration: 2s;
+}
+
+ul.fachada li:nth-child(2) .ladron {
+  animation-duration: 2.5s;
+}
+
+ul.fachada li:nth-child(3) .ladron {
+  animation-duration: 3s;
+}
+
+ul.fachada li:nth-child(4) .ladron {
+  animation-duration: 2.2s;
+}
+
+ul.fachada li:nth-child(5) .ladron {
+  animation-duration: 2.7s;
+}
+
+ul.fachada li:nth-child(6) .ladron {
+  animation-duration: 3.1s;
+}
+
+ul.fachada li:nth-child(7) .ladron {
+  animation-duration: 2.4s;
+}
+
+ul.fachada li:nth-child(8) .ladron {
+  animation-duration: 2.9s;
+}
+
+ul.fachada li:nth-child(9) .ladron {
+  animation-duration: 3.3s;
+}
+
+/* LLADRES RÀPIDS (més punts) */
+ul.fachada li:nth-child(1) .ladron:checked::after,
+/* 2s */
+ul.fachada li:nth-child(4) .ladron:checked::after,
+/* 2.2s */
+ul.fachada li:nth-child(7) .ladron:checked::after {
+  /* 2.4s */
+  content: "+3!";
+  color: #00ff00;
+  /* verd per indicar “bo” */
+  font-size: 1.4em;
+}
+
+/* LLADRES DE VELOCITAT MITJANA */
+ul.fachada li:nth-child(2) .ladron:checked::after,
+/* 2.5s */
+ul.fachada li:nth-child(5) .ladron:checked::after,
+/* 2.7s */
+ul.fachada li:nth-child(8) .ladron:checked::after {
+  /* 2.9s */
+  content: "+2!";
+  color: #ffee55;
+}
+
+/* LLADRES LENTS (menys punts) */
+ul.fachada li:nth-child(3) .ladron:checked::after,
+/* 3s */
+ul.fachada li:nth-child(6) .ladron:checked::after,
+/* 3.1s */
+ul.fachada li:nth-child(9) .ladron:checked::after {
+  /* 3.3s */
+  content: "+1!";
+  color: #ff8800;
+
+}
+
+
+.fachada .ventana .persiana {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(rgba(128, 128, 128, 0.8), rgba(128, 128, 128, 0.9)),
+    url('/assets/estor.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* visibility: hidden; */
+  animation: moure-persiana 3s ease-in-out infinite;
+
+}
+
+
+@keyframes moure-persiana {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 40%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+
+footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  background-color: bisque;
+  background-image: url('/assets/acera.jpg');
+  background-repeat: repeat;
+  color: white;
+}
+
+footer h3 {
+  font-size: 1.6em;
+  padding: 0 10px 0 10px;
+  background-color: grey;
+  border-radius: 15px;
+}
+
+footer h3::after {
+  content: counter(encerts);
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+
+footer a {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 4px;
+  padding: 0 10px 0 10px;
+  background-color: lightgray;
+  text-decoration: none;
+  color: #222;
+
+}
+
+.game-over {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  visibility: hidden;
+  animation: game-over 250ms forwards;
+  animation-delay: 8s;
+}
+
+@keyframes game-over {
+  0% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+.game-over h3 .total-encerts::after {
+  content: counter(encerts);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.game-over a {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: lightgray;
+  text-decoration: none;
+  color: #222;
+  border-radius: 5px;
+}
