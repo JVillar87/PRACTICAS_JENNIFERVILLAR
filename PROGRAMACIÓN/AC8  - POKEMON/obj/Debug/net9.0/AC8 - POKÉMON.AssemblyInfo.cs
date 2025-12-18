@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AC8 - POKÉMON")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+509276401c8aee0aa8de70fb282aed3facf5de13")]
 [assembly: System.Reflection.AssemblyProductAttribute("AC8 - POKÉMON")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AC8 - POKÉMON")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

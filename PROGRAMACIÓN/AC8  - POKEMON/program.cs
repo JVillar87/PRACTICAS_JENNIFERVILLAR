@@ -111,7 +111,6 @@
         int indiceActivo = 0;
         int indiceObjetivo = 0;
 
-        while (combateActivo)
         {
             Console.WriteLine($"\n--- TURNO DEL {(turno == 0 ? "JUGADOR" : "CPU")} ---");
 
@@ -121,15 +120,15 @@
             {
                 // Turno del jugador: seleccionar Pokémon.
                 Console.WriteLine("Selecciona tu Pokémon activo:");
-                Pokemon EquipoMod;
                 for (int i = 0; i < 3; i++)
                 {
-                    EquipoMod = equipos[0, i];
-                    if (EquipoMod.estaVivo)
+                    Pokemon p = equipos[0, i];
+                    if (p.estaVivo)
                     {
-                        Console.WriteLine($"{i + 1}. {EquipoMod.nombre} (Vida: {EquipoMod.vida})");
+                        Console.WriteLine($"{i + 1}. {p.nombre} (Vida: {p.vida})");
                     }
                 }
+
                 indiceActivo = int.Parse(Console.ReadLine()); ;
 
             }
@@ -194,92 +193,96 @@
                 Console.WriteLine("¡Te has rendido! La CPU gana.");
                 combateActivo = false;
             } // cualquier otra entrada se trata como 's' (continuar)
-            break;
+
         }
 
         /* [[ FASE 4: ATAQUES ]] */
+        do
+        {
+            // Ataque del jugador.
+            Console.WriteLine($"\n{equipos[0, indiceActivo].nombre} ataca a {equipos[1, indiceObjetivo].nombre}!");
+            int damage = equipos[0, indiceActivo].ataque - equipos[1, indiceObjetivo].defensa;
 
-        // Ataque del jugador.
-        Console.WriteLine($"\n{equipos[0, indiceActivo].nombre} ataca a {equipos[1, indiceObjetivo].nombre}!");
-        int damage = equipos[0, indiceActivo].ataque - equipos[1, indiceObjetivo].defensa;
-
-        if (damage < 1) damage = 1;
-        if (damage > 50) damage = 50;
-        if (random.Next(0, 100) < 15) // 15% de probabilidad de golpe crítico
-        {
-            damage *= 2;
-            Console.WriteLine("¡Golpe crítico!");
-        }
-        equipos[1, indiceObjetivo].vida -= damage;
-        Console.WriteLine($"{equipos[1, indiceObjetivo].nombre} recibe {damage} puntos de daño.");
-
-        if (equipos[1, indiceObjetivo].vida <= 0) // Comprobar si el Pokémon ha sido debilitado.
-        {
-            equipos[1, indiceObjetivo].estaVivo = false;
-            equipos[1, indiceObjetivo].vida = 0;
-            Console.WriteLine($"{equipos[1, indiceObjetivo].nombre} se ha debilitado.");
-        }
-        else
-        {
-            Console.WriteLine($"{equipos[1, indiceObjetivo].nombre} tiene {equipos[1, indiceObjetivo].vida} puntos de vida restantes.");
-        }
-        // Comprobamos si el enemigo (CPU) ha perdido.
-        bool cpuDerrotada = true;
-        for (int c = 0; c < 3; c++)
-        {
-            if (equipos[1, c].estaVivo)
+            if (damage < 1) damage = 1;
+            if (damage > 50) damage = 50;
+            if (random.Next(0, 100) < 15) // 15% de probabilidad de golpe crítico
             {
-                cpuDerrotada = false;
-                break;
+                damage *= 2;
+                Console.WriteLine("¡Golpe crítico!");
             }
-        }
-        if (cpuDerrotada)
-        {
-            Console.WriteLine("\n¡Has derrotado a todos los Pokémon de tu enemigo! ¡Has ganado!");
-        }
+            equipos[1, indiceObjetivo].vida -= damage;
+            Console.WriteLine($"{equipos[1, indiceObjetivo].nombre} recibe {damage} puntos de daño.");
 
-        // Ataque del enemigo (CPU), si es que sigue con vida.
-
-        Console.WriteLine($"\n{equipos[1, indiceObjetivo].nombre} ataca a {equipos[0, indiceActivo].nombre}!");
-        damage = equipos[1, indiceObjetivo].ataque - equipos[0, indiceActivo].defensa;
-
-        if (damage < 1) damage = 1;
-        if (damage > 50) damage = 50;
-        if (random.Next(0, 100) < 15) // 15% de probabilidad de golpe crítico
-        {
-            damage *= 2;
-            Console.WriteLine("¡Golpe crítico!");
-        }
-        equipos[0, 0].vida -= damage;
-        Console.WriteLine($"{equipos[0, 0].nombre} recibe {damage} puntos de daño.");
-
-        // Comprobamos si el Pokémon ha sido debilitado.
-        if (equipos[0, indiceActivo].vida <= 0)
-        {
-            equipos[0, indiceActivo].estaVivo = false;
-            equipos[0, indiceActivo].vida = 0;
-            Console.WriteLine($"{equipos[0, indiceActivo].nombre} se ha debilitado.");
-        }
-        else
-        {
-            Console.WriteLine($"{equipos[0, indiceActivo].nombre} tiene {equipos[0, indiceActivo].vida} puntos de vida restantes.");
-        }
-
-        bool jugadorDerrotado = true; // Comprobamos si el jugador ha perdido todos sus Pokémon.
-        for (int c = 0; c < 3; c++)
-        {
-            if (equipos[0, c].estaVivo)
+            if (equipos[1, indiceObjetivo].vida <= 0) // Comprobar si el Pokémon ha sido debilitado.
             {
-                jugadorDerrotado = false;
+                equipos[1, indiceObjetivo].estaVivo = false;
+                equipos[1, indiceObjetivo].vida = 0;
+                Console.WriteLine($"{equipos[1, indiceObjetivo].nombre} se ha debilitado.");
             }
-        }
-        if (jugadorDerrotado)
-        {
-            Console.WriteLine("\nTodos tus Pokémon han sido derrotados. El enemigo (CPU) gana.");
-        }
-        turno = turno + 1; // Cambiamos de turno.
+            else
+            {
+                Console.WriteLine($"{equipos[1, indiceObjetivo].nombre} tiene {equipos[1, indiceObjetivo].vida} puntos de vida restantes.");
+            }
+            // Comprobamos si el enemigo (CPU) ha perdido.
+            bool cpuDerrotada = true;
+            for (int c = 0; c < 3; c++)
+            {
+                if (equipos[1, c].estaVivo)
+                {
+                    cpuDerrotada = false;
+                    break;
+                }
+            }
+            if (cpuDerrotada)
+            {
+                Console.WriteLine("\n¡Has derrotado a todos los Pokémon de tu enemigo! ¡Has ganado!");
+            }
+
+            // Ataque del enemigo (CPU), si es que sigue con vida.
+
+            Console.WriteLine($"\n{equipos[1, indiceObjetivo].nombre} ataca a {equipos[0, indiceActivo].nombre}!");
+            damage = equipos[1, indiceObjetivo].ataque - equipos[0, indiceActivo].defensa;
+
+            if (damage < 1) damage = 1;
+            if (damage > 50) damage = 50;
+            if (random.Next(0, 100) < 15) // 15% de probabilidad de golpe crítico
+            {
+                damage *= 2;
+                Console.WriteLine("¡Golpe crítico!");
+            }
+            equipos[0, 0].vida -= damage;
+            Console.WriteLine($"{equipos[0, 0].nombre} recibe {damage} puntos de daño.");
+
+            // Comprobamos si el Pokémon ha sido debilitado.
+            if (equipos[0, indiceActivo].vida <= 0)
+            {
+                equipos[0, indiceActivo].estaVivo = false;
+                equipos[0, indiceActivo].vida = 0;
+                Console.WriteLine($"{equipos[0, indiceActivo].nombre} se ha debilitado.");
+            }
+            else
+            {
+                Console.WriteLine($"{equipos[0, indiceActivo].nombre} tiene {equipos[0, indiceActivo].vida} puntos de vida restantes.");
+            }
+
+            bool jugadorDerrotado = true; // Comprobamos si el jugador ha perdido todos sus Pokémon.
+            for (int c = 0; c < 3; c++)
+            {
+                if (equipos[0, c].estaVivo)
+                {
+                    jugadorDerrotado = false;
+                }
+            }
+            if (jugadorDerrotado)
+            {
+                Console.WriteLine("\nTodos tus Pokémon han sido derrotados. El enemigo (CPU) gana.");
+                combateActivo = false;
+            }
+            turno = turno + 1; // Cambiamos de turno.
+        } while (combateActivo);
 
         /* [[ FASE 5: FINALIZACIÓN ]] */
+
         Console.WriteLine("=================================");
         Console.WriteLine("         FIN DEL COMBATE         ");
         Console.WriteLine("=================================");
