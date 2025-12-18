@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AC7 - STRUCTS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a5cc28958b0bd32485328bffa8b5be3f523e0d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cba2045068a1e6efc9a9de757bb048040e255492")]
 [assembly: System.Reflection.AssemblyProductAttribute("AC7 - STRUCTS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AC7 - STRUCTS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

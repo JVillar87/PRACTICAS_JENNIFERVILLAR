@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj": {}
+    "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj": {
+    "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj",
+        "projectUniqueName": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj",
         "projectName": "AC7 - STRUCTS",
-        "projectPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj",
+        "projectPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\AC7 - STRUCTS.csproj",
         "packagesPath": "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\obj\\",
+        "outputPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACIÓN\\AC7 - STRUCTS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MSI-GF75thin\\AppData\\Roaming\\NuGet\\NuGet.Config"
