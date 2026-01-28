@@ -1,0 +1,15 @@
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\bin\Debug\net9.0\AC23 - CLASES.exe
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\bin\Debug\net9.0\AC23 - CLASES.deps.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\bin\Debug\net9.0\AC23 - CLASES.runtimeconfig.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\bin\Debug\net9.0\AC23 - CLASES.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\bin\Debug\net9.0\AC23 - CLASES.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.AssemblyInfoInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.AssemblyInfo.cs
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.csproj.CoreCompileInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.sourcelink.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\refint\AC23 - CLASES.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\AC23 - CLASES.genruntimeconfig.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC23 - CLASES\obj\Debug\net9.0\ref\AC23 - CLASES.dll

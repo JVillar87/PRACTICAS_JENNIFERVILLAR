@@ -1,0 +1,17 @@
+public  class JuegoBase {
+
+public string Nombre {get; set;}
+public int PublicationYear {get; set;}
+public string Estudio {get; set;}
+
+public JuegoBase (string nombre, int publicationYear, string estudio)
+{
+    Nombre = nombre;
+    PublicationYear = publicationYear;
+    Estudio = estudio;
+
+}
+
+/*Cada juego debe generarse con valores iniciales para sus propiedades, no hace falta
+poner valores por defecto, pero sí serán necesarios para su instanciación.*/
+}

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AC23 - CLASES/1.0.0": {
+        "runtime": {
+          "AC23 - CLASES.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AC23 - CLASES/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
