@@ -7,7 +7,7 @@ public class AventuraGrafica : JuegoBase
         Estudio = estudio;
     }
 
-     public void ShowData()
+     public override void ShowData()
         {
            Console.WriteLine($"Juego Aventura Gráfica: {Nombre}, Año: {PublicationYear}, Estudio: {Estudio}");
         }

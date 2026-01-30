@@ -17,9 +17,9 @@ public class JuegoShoot : JuegoBase
             return new Random().Next(0, 99);
         }
 
-    public void ShowData()
+    public override void ShowData()
         {
-           Console.WriteLine($"Juego Shoot: {Nombre}, Año: {PublicationYear}, Estudio: {Estudio}, PEGI: {Pegi}, Horas estimadas: {horasParaCompletar()}");
+           Console.WriteLine($"PEGI: {Pegi}, Horas estimadas: {horasParaCompletar()}");
         }
     
 

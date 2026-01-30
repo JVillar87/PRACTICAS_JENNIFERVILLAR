@@ -17,6 +17,10 @@
         juegos.Add(new Simulacion("SimCity", 2020, "Maxis", "Ciudades"));
         juegos.Add(new AventuraGrafica("Beautiful Desolation", 2019, "The Brotherhood Games"));
 
+        foreach (var item in juegos)
+        {
+            item.ShowData();
+        }
         Console.WriteLine("Juegos almacenados.");
     }
 

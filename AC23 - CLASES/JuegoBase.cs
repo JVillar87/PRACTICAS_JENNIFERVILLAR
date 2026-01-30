@@ -12,6 +12,12 @@ public JuegoBase (string nombre, int publicationYear, string estudio)
 
 }
 
+public virtual void ShowData()
+        {
+           Console.WriteLine($"Juego Shoot: {Nombre}, Año: {PublicationYear}, Estudio: {Estudio}");
+        }
+    
+
 /*Cada juego debe generarse con valores iniciales para sus propiedades, no hace falta
 poner valores por defecto, pero sí serán necesarios para su instanciación.*/
 }

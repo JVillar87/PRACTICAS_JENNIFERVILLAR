@@ -15,9 +15,9 @@ public class Simulacion : JuegoBase
     {
         Console.WriteLine("Número de turnos necesarios para completar la simulación: " + new Random().Next(1, 50));
     }
-    public void ShowData()
+    public override void ShowData()
     {
-        Console.WriteLine($"Juego Simulación: {Nombre}, Año: {PublicationYear}, Estudio: {Estudio}, Ámbito: {Ambito}");
+        Console.WriteLine($"Ámbito: {Ambito}");
     }
 }
 
