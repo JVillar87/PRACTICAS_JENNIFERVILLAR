@@ -2,7 +2,7 @@
 {
     private static void Main(string[] args)
     {
-        JuegoBase juego = new JuegoBase("Juego1", 2022, "Estudio1");
+        JuegoBase juego = new JuegoBase("Juego1", 2022, "Estudio1", 1);
         Console.WriteLine($"Juego: {juego.Nombre}, Año: {juego.PublicationYear}, Estudio: {juego.Estudio}");
         AlmacenarJuego();
         ShowCategoria();
@@ -13,9 +13,9 @@
     {
         List<JuegoBase> juegos = new List<JuegoBase>();
 
-        juegos.Add(new JuegoShoot("HALO INFINITE", 2021, "Halo Studios", 18));
-        juegos.Add(new Simulacion("SimCity", 2020, "Maxis", "Ciudades"));
-        juegos.Add(new AventuraGrafica("Beautiful Desolation", 2019, "The Brotherhood Games"));
+        juegos.Add(new JuegoShoot("HALO INFINITE", 2021, "Halo Studios", 0, 18));
+        juegos.Add(new Simulacion("SimCity", 2020, "Maxis", 1,"Ciudades"));
+        juegos.Add(new AventuraGrafica("Beautiful Desolation", 2019, "The Brotherhood Games", 3));
 
         foreach (var item in juegos)
         {
@@ -28,26 +28,28 @@
     {
         List<JuegoBase> juegos = new List<JuegoBase>();
 
-        juegos.Add(new JuegoShoot("HALO INFINITE", 2021, "Halo Studios", 18));
-        juegos.Add(new Simulacion("SimCity", 2020, "Maxis", "Ciudades"));
-        juegos.Add(new AventuraGrafica("Beautiful Desolation", 2019, "The Brotherhood Games"));
+        juegos.Add(new JuegoShoot("HALO INFINITE", 2021, "Halo Studios", 0, 18));
+        juegos.Add(new Simulacion("SimCity", 2020, "Maxis", 1,"Ciudades"));
+        juegos.Add(new AventuraGrafica("Beautiful Desolation", 2019, "The Brotherhood Games", 3));
 
         Console.WriteLine("Mostrando juegos por categoría:");
 
         foreach (var juego in juegos)
         {
-            switch (juego)
+            if (juego.GetCategoria() == 0)
             {
-                case JuegoShoot shoot:
-                    shoot.ShowData();
-                    break;
-                case Simulacion sim:
-                    sim.ShowData();
-                    sim.turnosNecesarios();
-                    break;
-                case AventuraGrafica aventura:
-                    aventura.ShowData();
-                    break;
+                Console.WriteLine($"Juego SHOOTER");
+                juego.ShowData();
+            }
+            else if (juego.GetCategoria() == 1)
+            {
+                Console.WriteLine($"Juego de SIMULACIÓN");
+                juego.ShowData();
+            }
+            else
+            {
+                Console.WriteLine($"Juego AVENTURA GRÁFICA");
+                juego.ShowData();
             }
         }
     }
