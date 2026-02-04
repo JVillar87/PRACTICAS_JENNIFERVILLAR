@@ -1,0 +1,15 @@
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.AssemblyInfoInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.AssemblyInfo.cs
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.csproj.CoreCompileInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.sourcelink.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\bin\Debug\net9.0\AC24 - ROBOTS.exe
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\bin\Debug\net9.0\AC24 - ROBOTS.deps.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\bin\Debug\net9.0\AC24 - ROBOTS.runtimeconfig.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\bin\Debug\net9.0\AC24 - ROBOTS.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\bin\Debug\net9.0\AC24 - ROBOTS.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\refint\AC24 - ROBOTS.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\AC24 - ROBOTS.genruntimeconfig.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC24 - ROBOTS\obj\Debug\net9.0\ref\AC24 - ROBOTS.dll

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AC24 - ROBOTS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bc5039c094b63a5f98348567c24e1716c7ee275")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94acf544d113635e3c4c85428b4b8ccf3bcfcca4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AC24 - ROBOTS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AC24 - ROBOTS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

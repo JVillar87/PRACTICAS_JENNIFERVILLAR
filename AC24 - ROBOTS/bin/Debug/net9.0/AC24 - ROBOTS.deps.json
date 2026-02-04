@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AC24 - ROBOTS/1.0.0": {
+        "runtime": {
+          "AC24 - ROBOTS.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AC24 - ROBOTS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
