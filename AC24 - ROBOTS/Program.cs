@@ -2,7 +2,7 @@
 {
     public static void Main()
 {
-    Robot[] fabrica = new Robot[10]; 
+    List<Robot> robots = new List<Robot>();
     int opcion;
 
     do
@@ -19,21 +19,21 @@
         switch (opcion)
         {
             case 1:                
-                CrearRobot(fabrica);
+                CrearRobot(robots);
                 break;
 
             case 2:
-                NuevoNombre(fabrica);
+                NuevoNombre(robots);
                 break;
 
             case 3:
-                VerRobot(fabrica);
+                VerRobot(robots);
                 break;
             case 4:
-                EliminarRobot(fabrica);
+                EliminarRobot(robots);
                 break;
             case 5:
-                ListarRobots(fabrica);
+                ListarRobots(robots);
                 break;
             case 0:
                 Console.WriteLine("Saliendo del programa...");
@@ -43,25 +43,8 @@
     } while (opcion != 0);
 }
 
-    public static void CrearRobot(Robot[] fabrica)
+    public static void CrearRobot(List<Robot> robots)
     {
-        int posicionLibre = -1;
-
-        for (int i = 0; i < fabrica.Length; i++)
-        {
-            if (fabrica[i] == null)
-            {
-                posicionLibre = i;
-                break;
-            }
-        }
-
-        if (posicionLibre == -1)
-        {
-            Console.WriteLine("Fábrica llena");
-            return;
-        }
-
         string nombre = Robot.GetNombre();
         string modelo = Robot.GetModelo();
 
@@ -82,22 +65,23 @@
                 break;
         }
 
-        fabrica[posicionLibre] = robot;
+        robots.Add(robot);
 
-        Console.WriteLine($"【ROBOT CREADO】 {robot.ObtenerNombre()} - {robot.ObtenerModelo()} en posición {posicionLibre}");
+        Console.WriteLine($"【ROBOT CREADO】 {robot.ObtenerNombre()} - {robot.ObtenerModelo()} en posición {robots.Count - 1}");
     }
 
-    public static void NuevoNombre(Robot[] fabrica)
+    public static void NuevoNombre(List<Robot> robots)
     {
         Console.WriteLine("Introduce posición del robot a resetear:");
-        string? input = Console.ReadLine();
+        int input = Convert.ToInt32(Console.ReadLine());
         
-        if (int.TryParse(input, out int posicion))
+        if (input >= 0 && input < robots.Count)
         {
-            if (posicion >= 0 && posicion < fabrica.Length && fabrica[posicion] != null)
+            int posicion = input;
+            if (robots[posicion] != null)
             {
-                fabrica[posicion].ResetNombre();
-                Console.WriteLine("【RESETEADO】 Nuevo nombre: " + fabrica[posicion].ObtenerNombre());
+                robots[posicion].ResetNombre();
+                Console.WriteLine("【RESETEADO】 Nuevo nombre: " + robots[posicion].ObtenerNombre());
             }
             else
             {
@@ -110,14 +94,14 @@
         }
     }
 
-    public static void VerRobot(Robot[] fabrica)
+    public static void VerRobot(List<Robot> robots)
     {
         Console.WriteLine("Introduce posición:");
         int position = int.Parse(Console.ReadLine());
 
-        if (position >= 0 && position < fabrica.Length && fabrica[position] != null)
+        if (position >= 0 && position < robots.Count && robots[position] != null)
         {
-            Console.WriteLine($"【ROBOT】: {fabrica[position].ObtenerNombre()} - {fabrica[position].ObtenerModelo()}");
+            Console.WriteLine($"【ROBOT】: {robots[position].ObtenerNombre()} - {robots[position].ObtenerModelo()}");
         }
         else
         {
@@ -125,15 +109,15 @@
         }
     }
 
-    public static string EliminarRobot(Robot[] fabrica)
+    public static string EliminarRobot(List<Robot> robots)
     {
        
         Console.WriteLine("Posición:");
         int pos = int.Parse(Console.ReadLine());
 
-        if (pos >= 0 && pos < fabrica.Length && fabrica[pos] != null)
+        if (pos >= 0 && pos < robots.Count && robots[pos] != null)
         {
-            fabrica[pos] = null;
+            robots[pos] = null;
             Console.WriteLine("【 ROBOT ELIMINADO 】");
         }
         else
@@ -143,13 +127,13 @@
         return null;
     }
 
-    public static void ListarRobots(Robot[] fabrica)
+    public static void ListarRobots(List<Robot> robots)
     {
-        for (int i = 0; i < fabrica.Length; i++)
+        for (int i = 0; i < robots.Count; i++)
         {
-            if (fabrica[i] != null)
+            if (robots[i] != null)
             {
-                Console.WriteLine($"【POSICIÓN】{i} -> {fabrica[i].ObtenerNombre()} - {fabrica[i].ObtenerModelo()}");
+                Console.WriteLine($"【POSICIÓN】{i} -> {robots[i].ObtenerNombre()} - {robots[i].ObtenerModelo()}");
             }
             else
             {
