@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#background{
+    background-color: blueviolet;
+    width: 100%;
+    height:600px;
+    position: relative;
+    background: url("/img/background.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: backgroundMove 5s linear infinite;
+}
+
+/* #background img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: backgroundMove 5s linear infinite;
+   
+} */
+
+#dino{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 450px;
+    left: 25px;
+    
+}
+
+#dino img{
+    width: 100%;
+    height: 100%;
+}
+
+.dinoJump{
+    animation: playerJump 1s linear infinite;
+}
+
+
+ @keyframes playerJump {
+        0%{
+            bottom: 120px;
+        }
+        50%{
+            bottom: 300px;
+        }
+    }
+
+@keyframes backgroundMove{
+    0% {
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+    
+}
