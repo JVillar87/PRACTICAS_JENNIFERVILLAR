@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AC25 - EXCEPCIONES")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c1f24272e3540b0c979852b29064aafc08eed2c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e7d2b3d6be1b5eb803f4472ec42f6690d64d095")]
 [assembly: System.Reflection.AssemblyProductAttribute("AC25 - EXCEPCIONES")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AC25 - EXCEPCIONES")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

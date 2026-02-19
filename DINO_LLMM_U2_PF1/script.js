@@ -1,9 +1,9 @@
-const dino = document.getElementById("dino")
+const player = document.getElementById("player")
 
-dino.addEventListener("click", ()=> {
-    dino.classList.add("playerJump");
+player.addEventListener("click", ()=> {
+    player.classList.add("playerJump");
 } )
 
-dino.addEventListener('animationend', () => {
-  dino.classList.remove("playerJump");  
+player.addEventListener('animationend', () => {
+  player.classList.remove("playerJump");  
 })
