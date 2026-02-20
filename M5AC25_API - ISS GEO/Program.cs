@@ -29,7 +29,7 @@ internal class Program
         Console.WriteLine(url1);
 
         string countryName = WhereISS.countryName;
-        string countryCode = WhereISS.countryName;
+        string countryCode = WhereISS.countryCode;
 
 
         do
