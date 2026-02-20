@@ -1,0 +1,18 @@
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\bin\Debug\net9.0\API - ISS GEO.exe
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\bin\Debug\net9.0\API - ISS GEO.deps.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\bin\Debug\net9.0\API - ISS GEO.runtimeconfig.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\bin\Debug\net9.0\API - ISS GEO.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\bin\Debug\net9.0\API - ISS GEO.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.csproj.AssemblyReference.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.AssemblyInfoInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.AssemblyInfo.cs
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.csproj.CoreCompileInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.sourcelink.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - IS.5E4B45DA.Up2Date
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\refint\API - ISS GEO.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\API - ISS GEO.genruntimeconfig.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\M5AC25_API - ISS GEO\obj\Debug\net9.0\ref\API - ISS GEO.dll

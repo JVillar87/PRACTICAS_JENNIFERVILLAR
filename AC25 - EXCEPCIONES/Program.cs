@@ -60,17 +60,29 @@
     /*Escribe un programa que lea una ruta de archivo proporcionada por el usuario e intente abrir el archivo. 
     Maneja excepciones si el archivo no existe.*/
 
-    Console.Write("Ingresa la ruta completa del archivo: ");
-    string ruta = Console.ReadLine();
-
         try
         {
-            
+            Console.WriteLine("Ingresa la ruta del archivo: ");
+            string ruta = Console.ReadLine();
+
+            string contenido = File.ReadAllText(ruta);            
+            Console.WriteLine($"Contenido: {contenido}");
         }
-        catch
+        
+        catch (ArgumentException)
         {
-            
+            Console.WriteLine("Error: La ruta ingresada no es válida.");
         }
+        
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ocurrió un error inesperado: {ex.Message}");
+        }
+        finally
+        {
+            Console.WriteLine("\nProceso finalizado.");
+        }
+        
             
     /*Escribe un programa que solicite al usuario ingresar un número entero.
     Lanza una excepción si el número es menor que 0 o mayor que 1000.*/
@@ -93,8 +105,20 @@
     /*Escribe un programa que implemente un método que reciba un arreglo de enteros como entrada y calcule el valor promedio. 
     Maneja la excepción si el índice está fuera de rango*/
 
-
-
+    public static double calcularPromedio(int[] arreglo) 
+       {
+        
+        if (arreglo == null || arreglo.length == 0)
+            {
+                Console.WriteLine("El arreglo está vacío.");
+                return 0;
+            }
+         public class CalculadoraPromedio {
+         int[] promedio = {10, 20, 30, 40, 50};
+            double results = calcularPromedio(promedio);
+            Console.WriteLine("El promedio es: " + results);
+        }
+       
 
     /*Escribe un programa que lea una cadena del usuario y la convierta en un entero. 
     Maneja la excepción si la entrada no se puede  analizar como un entero.*/
@@ -148,9 +172,7 @@
 
     /*Escribe un programa que cree un método que tome una cadena como entrada y la convierta a mayúsculas. 
     Controla la excepción NullReferenceException que se produce si la cadena de entrada es nula.*/
-
-    
-
-
+       }
     }
 }
+       
