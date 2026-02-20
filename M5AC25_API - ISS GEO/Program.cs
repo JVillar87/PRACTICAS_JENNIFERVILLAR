@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string url = "http://api.open-notify.org/iss-now.json";
+        string url = "http://api.open-notify.org/iss-now.json"; //endpoint coordenadas
 
         HttpClient client = new HttpClient();
 
@@ -17,7 +17,7 @@ internal class Program
         string latitude = findISS.iss_position.latitude;
         string longitude = findISS.iss_position.longitude;
         
-        string url1 = $"http://api.geonames.org/countryCodeJSON?lat={latitude}&lng={longitude}&username=Marc";
+        string url1 = $"http://api.geonames.org/countryCodeJSON?lat={latitude}&lng={longitude}&username=Marc"; //endpoint ciudades (wheretheiss)
 
         HttpClient clients = new HttpClient();
 
@@ -25,7 +25,7 @@ internal class Program
         string jsonResponses = responses.Content.ReadAsStringAsync().Result;
 
 
-        var WhereISS = JsonConvert.DeserializeObject<Root>(jsonResponses);
+        var WhereISS = JsonConvert.DeserializeObject<Countries>(jsonResponses);
         Console.WriteLine(url1);
 
         string countryName = WhereISS.countryName;
@@ -42,34 +42,6 @@ internal class Program
 
     }
 }
-
-
-    //1ª Llamada: COORDENADAS
-    public class IssPosition
-    {
-        public string latitude { get; set; }
-        public string longitude { get; set; }
-    }
-
-    public class Coordinates
-    {
-        public string message { get; set; }
-        public int timestamp { get; set; }
-        public IssPosition iss_position { get; set; }
-    }
-
-
-    //2ª Llamada: CIUDADES
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-    public class Root
-    {
-        public string languages { get; set; }
-        public string distance { get; set; }
-        public string countryCode { get; set; }
-        public string countryName { get; set; }
-    }
-
-
 
 
 
