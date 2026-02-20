@@ -61,7 +61,6 @@ internal class Program
 
     //2ª Llamada: CIUDADES
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class Root
     {
         public string languages { get; set; }
