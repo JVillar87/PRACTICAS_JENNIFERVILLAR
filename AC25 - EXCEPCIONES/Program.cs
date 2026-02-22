@@ -1,4 +1,4 @@
-﻿public class Program
+﻿partial class Program
 {
     public static void Main()
     {
@@ -105,24 +105,65 @@
     /*Escribe un programa que implemente un método que reciba un arreglo de enteros como entrada y calcule el valor promedio. 
     Maneja la excepción si el índice está fuera de rango*/
 
-    public static double calcularPromedio(int[] arreglo) 
-       {
+        int[] enteros = { 10, 20, 30, 40, 50 };
+        double newResult = CalcularPromedio(enteros);
+        Console.WriteLine($"El promedio es: {newResult}");
+        public static double CalcularPromedio(int[] numeros)
+        {
         
-        if (arreglo == null || arreglo.length == 0)
-            {
-                Console.WriteLine("El arreglo está vacío.");
-                return 0;
-            }
-         public class CalculadoraPromedio {
-         int[] promedio = {10, 20, 30, 40, 50};
-            double results = calcularPromedio(promedio);
-            Console.WriteLine("El promedio es: " + results);
+        if (numeros == null || numeros.Length == 0)
+        {
+            Console.WriteLine("Está vacío o es nulo.");
+            return 0;
         }
-       
+
+        double suma = 0;
+
+        try
+        {
+            
+            for (int i = 0; i <= numeros.Length; i++) 
+            {
+                suma += numeros[i];
+            }
+        }
+        catch (IndexOutOfRangeException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ocurrió un error inesperado: {ex.Message}");
+        }
+
+        return suma / numeros.Length;        
 
     /*Escribe un programa que lea una cadena del usuario y la convierta en un entero. 
     Maneja la excepción si la entrada no se puede  analizar como un entero.*/
+    Console.WriteLine("Ingresa un número:");
+    string entrada = Console.ReadLine();
 
+        try
+        {
+            int numbah = int.Parse(entrada);
+            Console.WriteLine($"¡Éxito! El número convertido es: {numbah}");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Error: Formato incorrecto.");
+        }
+        catch (OverflowException ex)
+        {
+            Console.WriteLine("Error:" + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            // Bloque genérico para cualquier otro error inesperado
+            Console.WriteLine($"Ocurrió un error no previsto: {ex.Message}");
+        }
+        
+        Console.WriteLine("Fin del programa.");
+    }
 
 
 
@@ -172,7 +213,8 @@
 
     /*Escribe un programa que cree un método que tome una cadena como entrada y la convierta a mayúsculas. 
     Controla la excepción NullReferenceException que se produce si la cadena de entrada es nula.*/
-       }
+       
     }
+}
 }
        

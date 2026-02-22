@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API - ISS GEO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6733ff091add534af3baf33f13a564590e11dff2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+593f6cb659576a6069960bd9c5d03b9d7f3bca00")]
 [assembly: System.Reflection.AssemblyProductAttribute("API - ISS GEO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API - ISS GEO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

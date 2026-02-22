@@ -3,60 +3,75 @@
     margin: 0;
 }
 
-#background{
-    background-color: blueviolet;
-    width: 100%;
-    height:600px;
+
+body {
+    height: 100vh;
+    background: #584040;
+    display: flex;
+    align-items: center;
+
+}
+
+#game-container{
+    width: 950px;
+    height: 290px;
     position: relative;
-    background: url("/img/background.png");
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size: auto 100%;
-    animation: backgroundMove 5s linear infinite;
+    background: linear-gradient(#B7D6C7, #FFE2D1);
+
 }
 
-/* #background img{
-    width: 100%;
-    height: 100%;
+#floor{
+    width: 200%;
+    height: 42px;
     position: absolute;
-    animation: backgroundMove 5s linear infinite;
-   
-} */
+    bottom: 0;
+    left: 0;
 
-#player{
-    width: 80px;
-    height: 80px;
+    background: url(./img/suelo.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+
+#score{
+    width: 100px;
+    height: 30px;
     position: absolute;
-    bottom: 450px;
-    left: 25px;
-    
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    columns: #D48872;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10;
+    font-weight: bold;
+    text-align: right;
 }
 
-#player img{
-    width: 100%;
-    height: 100%;
+#dino{
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+    background: url(./img/dino.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position: 0px;
 }
 
-.dinoJump{
-    animation: playerJump 1s linear infinite;
+.dino-running{
+    animation: animarDino 0.25s steps(2) infinite;
 }
 
+.dino-crashed{
+    background-position-x: -252px;
+}
 
- @keyframes playerJump {
-        0%{
-            bottom: 120px;
-        }
-        50%{
-            bottom: 300px;
-        }
+@keyframes animarDino {
+    from{
+        background-position: -84px;
     }
-
-@keyframes backgroundMove{
-    0% {
-        right: 0%;
-    }
-    100%{
-        right: 100%;
+    to{
+        background-position: -252px;
     }
     
 }

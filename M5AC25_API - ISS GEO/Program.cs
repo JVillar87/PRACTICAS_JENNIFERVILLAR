@@ -34,8 +34,17 @@ internal class Program
 
         do
         {
-            Console.WriteLine($"{findISS}, {countryName}, {countryCode}");
-            Thread.Sleep(2000);
+            if (countryName == null)
+            {
+                Console.WriteLine("Está en el mar");
+                Thread.Sleep(2000); 
+            } else
+            {
+              Console.WriteLine($"{findISS}, {countryName}, {countryCode}");
+              Thread.Sleep(2000);    
+            }
+            
+                        
         } while (true);
 
 
