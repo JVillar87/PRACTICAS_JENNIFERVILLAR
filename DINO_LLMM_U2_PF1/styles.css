@@ -17,6 +17,7 @@ body {
     height: 290px;
     position: relative;
     background: linear-gradient(#B7D6C7, #FFE2D1);
+    overflow: hidden;
 
 }
 
