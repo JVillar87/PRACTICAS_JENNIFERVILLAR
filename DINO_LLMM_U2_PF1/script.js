@@ -3,7 +3,7 @@ var deltaTime = 0;
 
 var floorY = 22;
 var velY = 0;
-var impulso = 900;
+var impulso = 800;
 var gravedad = 2500;
 
 var dinoPosX = 42;
@@ -13,6 +13,7 @@ var floorX = 0;
 var velEscenario = 1280/3;
 var gameVel = 1;
 var score = 0;
+
 
 var parado = false;
 var jumping = false;
@@ -36,10 +37,13 @@ if (document.readyState === "complete" || document.readyState === "interactive")
 }
 
 function Update() {
+if (parado) return;
+
   MoveFloor();
   MoveDino();
   AñadirObstaculos();
   MoverObstaculos();
+  DetectarColision();
 
   velY -= gravedad * deltaTime;
 
@@ -89,7 +93,6 @@ function MoveFloor(){
 
 }
 
-
 function MoveDino(){
   dinoPosY += velY * deltaTime;
   if(dinoPosY < floorY){
@@ -132,18 +135,16 @@ function CrearObstaculo() {
 
 function MoverObstaculos(){
   for (var i = obstaculos.length -1; i >= 0; i--) {
-    if(obstaculos[i].posX < -obstaculos[i].clientWidth){
+    if(obstaculos[i].posX < -obstaculos[i].clientWidth) {
       obstaculos[i].parentNode.removeChild(obstaculos[i]);
       obstaculos.splice(i, 1);
       GanarPuntos();
     } else{
       obstaculos[i].posX -= CalcularDesplazamiento();
       obstaculos[i].style.left = obstaculos[i].posX+"px";
-
     }
   }
-    
-  }
+}
 
 function GanarPuntos(){
   score++;
