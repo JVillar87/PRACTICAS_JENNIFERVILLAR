@@ -1,9 +1,40 @@
 var time = new Date();
 var deltaTime = 0;
 
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  setTimeout(Init,1);  
+}else{
+  document.addEventListener("DOMContentLoaded", Init);
+}
+
+function Init() {
+  time = new Date();
+  Start();
+  Loop();
+}
+
+function Update() {
+if (parado) return;
+
+  MoveFloor();
+  MoveDino();
+  AñadirObstaculos();
+  MoverObstaculos();
+
+  velY -= gravedad * deltaTime;
+
+}
+
+function Loop() {
+  deltaTime = (new Date() - time) / 1000;
+  time = new Date();
+  Update()
+  requestAnimationFrame(Loop);
+}
+
 var floorY = 22;
 var velY = 0;
-var impulso = 800;
+var impulso = 850;
 var gravedad = 2500;
 
 var dinoPosX = 42;
@@ -30,38 +61,6 @@ var textScore;
 var floor;
 var gameOver;
 
-if (document.readyState === "complete" || document.readyState === "interactive") {
-  setTimeout(Init,1);  
-}else{
-  document.addEventListener("DOMContentLoaded", Init);
-}
-
-function Update() {
-if (parado) return;
-
-  MoveFloor();
-  MoveDino();
-  AñadirObstaculos();
-  MoverObstaculos();
-  DetectarColision();
-
-  velY -= gravedad * deltaTime;
-
-}
-
-function Init() {
-  time = new Date();
-  Start();
-  Loop();
-}
-
-function Loop() {
-  deltaTime = (new Date() - time) / 1000;
-  time = new Date();
-  Update()
-  requestAnimationFrame(Loop);
-}
-
 function Start() {
   gameOver = document.querySelector(".game-over");
   floor = document.querySelector("#floor");
@@ -75,11 +74,11 @@ function Start() {
 
 function HandleKeyDown(ev){
   if (ev.keyCode == 32) { 
-    Saltar();
+    Jump();
   }
 }
 
-function Saltar(){
+function Jump(){
   if (dinoPosY === floorY){
     jumping = true;
     velY = impulso;
@@ -90,7 +89,6 @@ function Saltar(){
 function MoveFloor(){
   floorX += CalcularDesplazamiento();
   floor.style.left = -(floorX % container.clientWidth) + "px";
-
 }
 
 function MoveDino(){
@@ -133,55 +131,55 @@ function CrearObstaculo() {
   (tiempoObstaculoMax-tiempoObstaculoMin) / gameVel;
 }
 
-function MoverObstaculos(){
-  for (var i = obstaculos.length -1; i >= 0; i--) {
-    if(obstaculos[i].posX < -obstaculos[i].clientWidth) {
-      obstaculos[i].parentNode.removeChild(obstaculos[i]);
-      obstaculos.splice(i, 1);
-      GanarPuntos();
-    } else{
-      obstaculos[i].posX -= CalcularDesplazamiento();
-      obstaculos[i].style.left = obstaculos[i].posX+"px";
-    }
-  }
+function MoverObstaculos() {
+    for (var i = obstaculos.length - 1; i >= 0; i--) {
+        if(obstaculos[i].posX < -obstaculos[i].clientWidth) {
+            obstaculos[i].parentNode.removeChild(obstaculos[i]);
+            obstaculos.splice(i, 1);
+            GetPoints();
+        }else{
+            obstaculos[i].posX -= CalcularDesplazamiento();
+            obstaculos[i].style.left = obstaculos[i].posX+"px";
+        }
+    } 
 }
 
-function GanarPuntos(){
+function GetPoints(){
   score++;
   textScore.innerHTML = score
 }
 
-function DetectarColision(){
-  for(var i = 0; i < obstaculos.length; i++){
-    if (obstaculos[i].posX > dinoPosX + dino.clientWidth) {
-      break;
-    }else {
-      if(IsCollision()){
-        gameOver();
-      }
-    }
-  }
-}
-
-function IsCollision (a,b, paddingTop, paddingRight, paddingBottom, paddingLeft){
-  var aRect = a.getBoundingClientRect();
-  var bRect = b.getBoundingClientRect();
-
-  return !(
-    ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
-    (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
-    ((aRect.left + aRect.width - paddingRight) > bRect.left) ||
-    (aRect.left + paddingLeft > (bRect.left + bRect.width))
-  );
-}
-
 function GameOver() {
-  Estrellarse(); 
-  gameOver.style.display = "block";
+    Crash();
+    gameOver.style.display = "block";
 }
 
-function Estrellarse() {
-  dino.classList.remove("dino-running");
-  dino.classList.add("dino-crashed");
-  parado = true;
+function Crash() {
+    dino.classList.remove("dino-corriendo");
+    dino.classList.add("dino-estrellado");
+    parado = true;
+}
+
+function DetectarColision() {
+    for (var i = 0; i < obstaculos.length; i++) {
+        if(obstaculos[i].posX > dinoPosX + dino.clientWidth) {
+            break; 
+        }else{
+            if(IsCollision(dino, obstaculos[i], 10, 30, 15, 20)) {
+                GameOver();
+            }
+        }
+    }
+}
+
+function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft) {
+    var aRect = a.getBoundingClientRect();
+    var bRect = b.getBoundingClientRect();
+
+    return !(
+        ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
+        (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
+        ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
+        (aRect.left + paddingLeft > (bRect.left + bRect.width))
+    );
 }
