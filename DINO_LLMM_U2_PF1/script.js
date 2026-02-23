@@ -12,7 +12,7 @@ function Init() {
   Start();
   Loop();
 }
-
+ 
 function Update() {
 if (parado) return;
 
@@ -34,8 +34,8 @@ function Loop() {
 
 var floorY = 22;
 var velY = 0;
-var impulso = 850;
-var gravedad = 2500;
+var impulso = 950;
+var gravedad = 3500;
 
 var dinoPosX = 42;
 var dinoPosY = floorY;
@@ -72,6 +72,7 @@ function Start() {
   document.addEventListener("keydown", HandleKeyDown);
 }
 
+// ACCIÓN SALTO CON BARRA ESPACIADORA (32)
 function HandleKeyDown(ev){
   if (ev.keyCode == 32) { 
     Jump();
@@ -138,6 +139,7 @@ function MoverObstaculos() {
             obstaculos.splice(i, 1);
             GetPoints();
         }else{
+            console.log(obstaculos[i].posX);
             obstaculos[i].posX -= CalcularDesplazamiento();
             obstaculos[i].style.left = obstaculos[i].posX+"px";
         }
