@@ -21,6 +21,17 @@ body {
 
 }
 
+#cloud {
+    width: 125px;
+    height: 85px;
+    position: absolute;
+    top: 35px;
+    left: 500px;
+
+    background: url(./img/nube.png);
+    background-repeat:no-repeat;
+}
+
 #floor{
     width: 200%;
     height: 42px;
@@ -45,6 +56,17 @@ body {
     font-size: 10;
     font-weight: bold;
     text-align: right;
+}
+
+#cactus{
+    width: 46px;
+    height: 96px;
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(./img/cactus1.png) no-repeat;
 }
 
 #dino{
