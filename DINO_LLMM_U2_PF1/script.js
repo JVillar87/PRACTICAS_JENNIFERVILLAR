@@ -161,7 +161,7 @@ function DetectarColision(){
   }
 }
 
-function IsCollision (a,b paddingTop, paddingRight, paddingBottom, paddingLeft){
+function IsCollision (a,b, paddingTop, paddingRight, paddingBottom, paddingLeft){
   var aRect = a.getBoundingClientRect();
   var bRect = b.getBoundingClientRect();
 
