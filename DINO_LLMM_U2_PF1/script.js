@@ -69,8 +69,8 @@ function Start() {
   document.addEventListener("keydown", HandleKeyDown);
 }
 
-function HandleKeyDown(){
-  if (eval.keyCode == 32) {
+function HandleKeyDown(ev){
+  if (ev.keyCode == 32) { 
     Saltar();
   }
 }
@@ -88,6 +88,7 @@ function MoveFloor(){
   floor.style.left = -(floorX % container.clientWidth) + "px";
 
 }
+
 
 function MoveDino(){
   dinoPosY += velY * deltaTime;
