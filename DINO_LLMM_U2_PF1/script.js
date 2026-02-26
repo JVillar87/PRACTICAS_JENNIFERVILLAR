@@ -79,6 +79,7 @@ function HandleKeyDown(ev){
   }
 }
 
+//ACCIÓN DE SALTO
 function Jump(){
   if (dinoPosY === floorY){
     jumping = true;
@@ -87,6 +88,7 @@ function Jump(){
   }
 }
 
+//MOVIMIENTO A LA IZQ DEL SUELO
 function MoveFloor(){
   floorX += CalcularDesplazamiento();
   floor.style.left = -(floorX % container.clientWidth) + "px";
@@ -120,6 +122,7 @@ function AñadirObstaculos() {
   }
 }
 
+//APARICIÓN OBSTACULOS
 function CrearObstaculo() {
   var obstaculo = document.createElement("div");
   container.appendChild(obstaculo);
@@ -132,6 +135,7 @@ function CrearObstaculo() {
   (tiempoObstaculoMax-tiempoObstaculoMin) / gameVel;
 }
 
+//MOVIMIENTO DEL CACTUS
 function MoverObstaculos() {
     for (var i = obstaculos.length - 1; i >= 0; i--) {
         if(obstaculos[i].posX < -obstaculos[i].clientWidth) {
@@ -146,6 +150,7 @@ function MoverObstaculos() {
     } 
 }
 
+//PUNTOS
 function GetPoints(){
   score++;
   textScore.innerHTML = score
@@ -156,6 +161,7 @@ function GameOver() {
     gameOver.style.display = "block";
 }
 
+//COLISIÓN CONTRA CACTUS
 function Crash() {
     dino.classList.remove("dino-corriendo");
     dino.classList.add("dino-estrellado");
