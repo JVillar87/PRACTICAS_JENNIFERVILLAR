@@ -206,8 +206,7 @@ static void Main()
         foreach (string mensaje in mensajesLocales)
         {
             string[] partes = mensaje.Split(';');
-            if(partes.Length == 3)
-                Console.WriteLine($"Usuario: {partes[0]}, Asunto: {partes[1]}, Mensaje: {partes[2]}");
+            Console.WriteLine($"Usuario: {partes[0]}, Asunto: {partes[1]}, Mensaje: {partes[2]}");
         }
     }
 

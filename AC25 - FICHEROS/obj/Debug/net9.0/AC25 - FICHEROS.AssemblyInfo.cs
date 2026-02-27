@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AC25 - FICHEROS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c59f52c40bc014e025dd90dbdbb234cba0fcd98f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25e3297376e5226ecec65214df183f6b43404905")]
 [assembly: System.Reflection.AssemblyProductAttribute("AC25 - FICHEROS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AC25 - FICHEROS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
