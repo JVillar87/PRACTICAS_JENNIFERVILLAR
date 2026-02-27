@@ -11,3 +11,7 @@ C3PO, I need help
 R2D2, Todo ok
 C3PO, Trial, "Esto es una nueva prueba"
 R2D2, Trial, "Todo en orden"
+C3PO;Duda existencial;¿Por qué los humanos son tan raros?
+R2D2;Beep;Beep boop beep!
+C3PO, TESTING, "Mensaje de prueba: Sigo investigando el comportamiento humano"
+R2D2, Pruebas, "El comportamiento es extraño"

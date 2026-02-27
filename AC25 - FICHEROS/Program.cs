@@ -17,8 +17,8 @@ static void Main()
     - Leer todos los mensajes de archivo
     *recuerda el método .Split de los strings.*/
        
-        AddLocalMessage("C3PO;Duda existencial;¿Por qué los humanos son tan raros?");
-        AddLocalMessage("R2D2;Beep;Beep boop beep!");
+        AddLocalMessage(mensajesLocales);
+        AddLocalMessage(mensajesLocales);
         
         Console.WriteLine("Usuarios:");
         ListUsers();
@@ -122,13 +122,11 @@ static void Main()
     {
         if (!File.Exists(archivo))
         {
-            Console.WriteLine("El archivo no existe todavía.");
+            Console.WriteLine("El archivo aún no existea.");
             return;
         }
 
-        List<Libro> listaLibros = new List<Libro>();
-
-        
+        List<Libro> listaLibros = new List<Libro>();      
         using (StreamReader Listado = new StreamReader(archivo))
         {
             string linea;
@@ -148,8 +146,8 @@ static void Main()
         }        
         listaLibros.Sort((x, y) => x.Autor.CompareTo(y.Autor));
 
-        
         Console.WriteLine("LIBROS ORDENADOS POR AUTOR:");
+        
         foreach (var libro in listaLibros)
         {
             Console.WriteLine($"Autor: {libro.Autor} | Título: {libro.Titulo} | ISBN: {libro.Isbn}");
@@ -164,7 +162,7 @@ static void Main()
     }
 
     //Funciones para el ejercicio 1
-    static void AddLocalMessage(string? mensajeSimulado = null)
+    static void AddLocalMessage(List<string> mensajesLocales)
     {
         Console.WriteLine("Escribe un mensaje (usuario;asunto;mensaje):");
             string? entrada = Console.ReadLine();
