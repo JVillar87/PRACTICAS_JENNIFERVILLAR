@@ -26,6 +26,9 @@ static void Main()
         Console.WriteLine("MENSAJES DE C3P0:");
         ReadLocalMessage("C3PO");
 
+        Console.WriteLine("MENSAJES DE R2D2:");
+        ReadLocalMessage("R2D2");
+
         Console.WriteLine("ALL LOCAL MESSAGES:");
         ReadeAllLocalMessages();
 
@@ -42,7 +45,6 @@ static void Main()
     - Ordenar por autor: modifica la función leerLibro para que muestre los libros almacenados
     en el archivo ordenados por autor. Para ello, deberás usar una estructura dinámica para
     almacenar los libros del archivo y ordenarlos con sort.*/
-
 
         string archivo = "libros.txt";
         int opcion;
@@ -147,7 +149,7 @@ static void Main()
         listaLibros.Sort((x, y) => x.Autor.CompareTo(y.Autor));
 
         Console.WriteLine("LIBROS ORDENADOS POR AUTOR:");
-        
+
         foreach (var libro in listaLibros)
         {
             Console.WriteLine($"Autor: {libro.Autor} | Título: {libro.Titulo} | ISBN: {libro.Isbn}");
