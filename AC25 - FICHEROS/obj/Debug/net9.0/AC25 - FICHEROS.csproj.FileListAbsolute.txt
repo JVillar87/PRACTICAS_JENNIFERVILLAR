@@ -1,0 +1,15 @@
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\bin\Debug\net9.0\AC25 - FICHEROS.exe
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\bin\Debug\net9.0\AC25 - FICHEROS.deps.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\bin\Debug\net9.0\AC25 - FICHEROS.runtimeconfig.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\bin\Debug\net9.0\AC25 - FICHEROS.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\bin\Debug\net9.0\AC25 - FICHEROS.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.AssemblyInfoInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.AssemblyInfo.cs
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.csproj.CoreCompileInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.sourcelink.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\refint\AC25 - FICHEROS.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\AC25 - FICHEROS.genruntimeconfig.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC25 - FICHEROS\obj\Debug\net9.0\ref\AC25 - FICHEROS.dll

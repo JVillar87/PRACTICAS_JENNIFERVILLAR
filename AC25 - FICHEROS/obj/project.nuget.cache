@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dYE4rP/OWws=",
+  "dgSpecHash": "S/xe1hwvWog=",
   "success": true,
   "projectFilePath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\AC25 - FICHEROS\\AC25 - FICHEROS.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.13\\microsoft.netcore.app.ref.9.0.13.nupkg.sha512",
+    "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.13\\microsoft.windowsdesktop.app.ref.9.0.13.nupkg.sha512",
+    "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.13\\microsoft.aspnetcore.app.ref.9.0.13.nupkg.sha512",
+    "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.13\\microsoft.netcore.app.host.win-x64.9.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

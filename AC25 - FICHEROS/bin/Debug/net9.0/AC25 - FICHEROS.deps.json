@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AC25 - FICHEROS/1.0.0": {
+        "runtime": {
+          "AC25 - FICHEROS.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AC25 - FICHEROS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
