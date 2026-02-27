@@ -229,7 +229,6 @@ static void Main()
             string linea;
             while ((linea = files.ReadLine()) != null)
             {
-                if (string.IsNullOrWhiteSpace(linea)) continue;
                 string[] partes = linea.Split(';');
                 if(partes.Length >= 3)
                     Console.WriteLine($"FILE > [{partes[0]}] {partes[1]}: {partes[2]}");

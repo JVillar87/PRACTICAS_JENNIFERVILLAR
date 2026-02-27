@@ -15,3 +15,5 @@ R2D2, Pruebas, "El comportamiento es extraño"
 C3PO, prueba, "Esto es una nueva prueba"
 R2D2, probando, "Probando, beep! boop!
 
+C3PO; new trial; 1,2,3...
+R2D2; new trial; beep beep
