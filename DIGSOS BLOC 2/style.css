@@ -4,7 +4,15 @@ table {
     border-collapse: collapse; 
     width: 100%; 
     margin-top: 20px; 
-    display:none;
+    display: contents;
+}
+
+p { 
+    font-size: 1.2em;
+    font-weight: bold; 
+    font-style: italic;
+    color: #2b1da7; 
+
 }
 
 th, td { 

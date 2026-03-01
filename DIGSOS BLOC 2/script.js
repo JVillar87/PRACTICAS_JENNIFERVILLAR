@@ -1,36 +1,34 @@
-// URL dataset Ajuntament de Barcelona
-const url = "https://opendata-ajuntament.barcelona.cat/data/dataset/49887163-f227-466d-88b1-4191d90f23d4/resource/8f3b0680-e832-473d-9860-e411c97a55ca/download";
+async function DescarregarDades() {
+    const url = "https://opendata-ajuntament.barcelona.cat/resources/bcn/EstadisticaPadro/pad/2025/2025_pad_m_cognom.json";
 
-async function descarregarDades() {
     try {
-        const resposta = await fetch(url);
-        const dades = await resposta.json();
-            
-        const tbody = document.querySelector("#taula-cognoms tbody");
-        const divEstat = document.getElementById("estat");
-
-        let files = "";
-
-        dades.forEach(item => {
-            files += `
-                <tr>
-                    <td>${item.ORDRE ?? '-'}</td>
-                    <td>${item.COGNOM ?? 'N/A'}</td>
-                    <td>${item.VALOR ?? item.FREQUENCIA ?? '0'}</td>
-                </tr>
-            `;
-        });
-
-        tbody.innerHTML = files;
-
-        divEstat.style.display = "none";
-        document.getElementById("taula-cognoms").style.display = "table";
+        fetch(url).then((response)=> response.json()).then((data)=>{
+            for (element of data)
+            {
+                // console.log(element.cognom)
+                CompletarTaula(element);
+            }
+        })               
 
     } catch (error) {
-        console.error("Error en el fetch:", error);
-        document.getElementById("estat").innerText = 
-            "Error en carregar les dades (possible bloqueig CORS).";
+        console.error("Error recuperando datos:", error);
     }
+};
+
+function CompletarTaula(element) {
+    Tabla= document.querySelector('#taula-cognoms');
+    const fila = document.createElement('tr')
+    fila.innerHTML = '<td>'+ element.ORDRE_COGNOM + '</td><td>' + element.COGNOM + '</td><td>' + element.Valor + '</td>';
+    Tabla.appendChild(fila)
 }
 
-descarregarDades();
+DescarregarDades();
+
+/*FONTS DE CONSULTES: 
+https://github.com/erickcernarequejo/Fetch-Json.git
+https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/JSON
+https://es.stackoverflow.com/questions/545654/como-mostrar-los-datos-de-un-json-utilizando-javascript 
+https://www.youtube.com/watch?v=8oL3uFySFcM 
++ amigo informático (Hector, mil gracias) en Discord para ver errores de escritura.
+*/
+

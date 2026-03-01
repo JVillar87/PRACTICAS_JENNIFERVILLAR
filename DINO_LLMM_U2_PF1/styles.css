@@ -21,15 +21,15 @@ body {
 
 }
 
-#cloud {
-    width: 125px;
-    height: 85px;
-    position: absolute;
-    top: 35px;
-    left: 500px;
+.cloud {
+    width: 92px;
+    height: 26px;
 
-    background: url(./img/nube.png);
-    background-repeat:no-repeat;
+    position: absolute;
+    z-index: 0;
+
+    background: url(./img/nube.png) no-repeat;
+    background-size: 92px 26px;
 }
 
 #floor{
@@ -43,6 +43,18 @@ body {
     background-size: 50% 42px;
 }
 
+.coin{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 75px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(./img/moneda.png) no-repeat center center;
+}
+
+
 #score{
     width: 100px;
     height: 30px;
@@ -51,9 +63,9 @@ body {
     right: 15px;
     z-index: 10;
 
-    columns: #d88d78;
+    color: #d88d78;
     font-family: Verdana;
-    font-size: 10;
+    font-size: 20px;
     font-weight: bold;
     text-align: right;
 }
@@ -67,6 +79,13 @@ body {
     z-index: 1;
 
     background: url(./img/cactus1.png) no-repeat;
+}
+
+.cactus2{
+    width: 98px;
+    height: 66px;
+
+    background: url(./img/cactus2.png) no-repeat;
 }
 
 .dino{
@@ -91,14 +110,13 @@ body {
 
 .game-over{
     display: none;
-
     position: absolute;
     width: 100%;
     text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #71817c;
+    color: #da5454;
     font-size: 30px;
     font-family: monospace;
     font-weight: 850;
@@ -113,9 +131,7 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #71817c;
-    font-size: 15px;
-    font-family: monospace;
+    color: #da5454;
     font-weight: 850;
 } 
 

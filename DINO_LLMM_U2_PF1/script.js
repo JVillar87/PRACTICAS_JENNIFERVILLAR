@@ -26,8 +26,12 @@ function Update() {
   //Llamadas a funciones
   MoveFloor();
   MoveDino();
+  AñadirNube();
+  AñadirCoin();
   AñadirObstaculos();
   MoverObstaculos();
+  MoverNube();
+  MoveCoin();
   DetectarColision();
 
   //Gravedad
@@ -57,7 +61,6 @@ var velEscenario = 1280 / 3;
 var gameVel = 1;
 var score = 0;
 
-
 var parado = false;
 var jumping = false;
 
@@ -67,22 +70,36 @@ var tiempoObstaculoMax = 1.5;
 var ObstaculoPosY = 16;
 var obstaculos = [];
 
+// var interactuables = [];
+
+var tiempoHastaCoin = 0.8;
+var tiempoHastaCoinMin = 0.5;
+var tiempoHastaCoinMax = 2;
+var coinPsY = 100;
+var coins = [];
+
+var tiempoHastaNube = 0.5;
+var tiempoNubeMin = 0.7;
+var tiempoNubeMax = 2.7;
+var maxNubeY = 270;
+var minNubeY = 100;
+var clouds = [];
+var velNube = 0.5;
+
+
 var container;
 var dino;
 var textScore;
 var floor;
 var gameOver;
-var restart;
 
 function Start() {
   gameOver = document.querySelector(".game-over");
-  restart = document.querySelector(".restart");
+  // restart = document.querySelector(".restart");
   floor = document.querySelector("#floor");
   container = document.querySelector("#game-container");
   textScore = document.querySelector("#score");
   dino = document.querySelector("#dino");
-  cactus = document.querySelector("#cactus");
-
 
   document.addEventListener("keydown", HandleKeyDown);
 }
@@ -101,12 +118,6 @@ function Jump() {
     velY = impulso;
     dino.classList.remove("dino-running");
   }
-}
-
-//MOVIMIENTO A LA IZQ DEL SUELO
-function MoveFloor() {
-  floorX += CalcularDesplazamiento();
-  floor.style.left = -(floorX % container.clientWidth) + "px";
 }
 
 //MOVIMIENTO DEL DINOSAURIO
@@ -128,10 +139,48 @@ function TocarSuelo() {
   jumping = false;
 }
 
+function MoveFloor() { //El suelo se mueve a la izquierda
+  floorX += CalcularDesplazamiento();
+  floor.style.left = -(floorX % container.clientWidth) + "px";
+}
+
 //CALCULO DE DESPLAZAMIENTO
 function CalcularDesplazamiento() {
   return velEscenario * deltaTime * gameVel; 
   //Calcula el desplazamiento del escenario (velocidad * tiempo * velocidad del juego)
+}
+
+//CIELO Y CLIMA
+function AñadirNube() {
+  tiempoHastaNube -= deltaTime;
+    if(tiempoHastaNube <= 0) {
+        CrearNube();
+    }
+}
+
+function CrearNube() {
+  var cloud = document.createElement("div");
+    container.appendChild(cloud);
+    cloud.classList.add("cloud");
+    cloud.posX = container.clientWidth;
+    cloud.style.left = container.clientWidth+"px";
+    cloud.style.bottom = minNubeY + Math.random() * (maxNubeY-minNubeY)+"px";
+    
+    clouds.push(cloud);
+    tiempoHastaNube = tiempoNubeMin + Math.random() * (tiempoNubeMax-tiempoNubeMin) / gameVel;
+}
+
+function MoverNube() {
+  for (var i = clouds.length - 1; i >= 0; i--) {
+    if(clouds[i].posX < -clouds[i].clientWidth) {
+        clouds[i].parentNode.removeChild(clouds[i]);
+        clouds.splice(i, 1);
+        }else
+          {
+            clouds[i].posX -= CalcularDesplazamiento() * velNube;
+            clouds[i].style.left = clouds[i].posX+"px";
+        }
+    }
 }
 
 //APARICIÓN DE OBSTACULOS
@@ -146,12 +195,15 @@ function CrearObstaculo() {
   var obstaculo = document.createElement("div");
   container.appendChild(obstaculo);
   obstaculo.classList.add("cactus");
+  if(Math.random() > 0.5) {
+    obstaculo.classList.add("cactus2");
+  }
   obstaculo.posX = container.clientWidth;
   obstaculo.style.left = container.clientWidth + "px"; //Posición inicial del obstaculo
 
   obstaculos.push(obstaculo); //Añade el nuevo obstaculo al array de obstaculos
-  tiempoHastaObstaculo = tiempoObstaculoMin + Math.random() *
-    (tiempoObstaculoMax - tiempoObstaculoMin) / gameVel; 
+  tiempoHastaObstaculo = tiempoObstaculoMin + Math.random() * 
+  (tiempoObstaculoMax - tiempoObstaculoMin) / gameVel; 
 }
 
 //MOVIMIENTO DEL CACTUS
@@ -160,13 +212,49 @@ function MoverObstaculos() {
     if (obstaculos[i].posX < -obstaculos[i].clientWidth) {
       obstaculos[i].parentNode.removeChild(obstaculos[i]);
       obstaculos.splice(i, 1);
-      GetPoints();
     } else {
-      // console.log(obstaculos[i].posX);
       obstaculos[i].posX -= CalcularDesplazamiento();
       obstaculos[i].style.left = obstaculos[i].posX + "px";
     }
   }
+}
+
+//CREAR MONEDAS
+function AñadirCoin() {
+  tiempoHastaCoin -= deltaTime;
+  if (tiempoHastaCoin <= 0) {
+    CrearCoin();
+  }
+  
+}
+
+function CrearCoin() {
+  var coin = document.createElement("div")
+  container.appendChild(coin);
+  coin.classList.add("coin");
+  coin.posX = container.clientWidth;
+  coin.style.left = container.clientWidth + "px"
+  coin.style.bottom = coinPsY + "px";
+
+  coins.push(coin);
+  tiempoHastaCoin = tiempoHastaCoinMin + Math.random() * 
+  (tiempoHastaCoinMax - tiempoHastaCoinMin) / gameVel;
+
+  // interactuables.push(coin);
+  //   tiempoHastaMoneda = tiempoMonedaMin + Math.random() * 
+  //   (tiempoMonedaMax-tiempoMonedaMin) / gameVel;
+}
+
+function MoveCoin() {
+  for (var i = coins .length - 1; i >= 0; i--) {
+    if (coins [i].posX < -coins [i].clientWidth) {
+      coins [i].parentNode.removeChild(coins [i]);
+      coins.splice(i, 1);
+    } else {
+      coins [i].posX -= CalcularDesplazamiento();
+      coins [i].style.left = coins [i].posX + "px";
+    }
+  } 
 }
 
 //PUNTOS
@@ -180,17 +268,7 @@ function GameOver() {
   Crash();
   gameOver.style.display = "block";
 }
-
-//RESETEAR JUEGO
-// function Restart() {
-//   document.addEventListener("keydown", function(ev) {
-//     if (collision && ev.keyCode == 82) { //Rrrr
-//       location.reload();
-//     }
-//   });
-// } 
-
-
+ 
 //COLISIÓN CONTRA CACTUS
 function Crash() {
   dino.classList.remove("dino-running");
@@ -211,11 +289,28 @@ function DetectarColision() {
   }
 }
 
+
+function DetectarMoneda () {
+  for (var i = 0; i < coins.length; i++) {
+    if (coins[i].posX > dinoPosX + dino.clientWidth) {
+      //EVADE COLISIÓN
+      break; //al estar en orden, no puede chocar con más
+    } else {
+      if (IsCollision(dino, coins[i], 10, 30, 15, 20)) {
+        GetPoints();
+        coins[i].parentNode.removeChild(coins[i]);
+        coins.splice(i, 1);
+      }
+    }
+  }
+}
+
+
 function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft) {
   var aRect = a.getBoundingClientRect(); //Devuelve tamaño objeto y su posición relativa al viewport
   var bRect = b.getBoundingClientRect();
 
-  let collision = (
+  return !(
     ((aRect.top + aRect.height - paddingBottom) < (bRect.top)) ||
     (aRect.top + paddingTop > (bRect.top + bRect.height)) ||
     ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
