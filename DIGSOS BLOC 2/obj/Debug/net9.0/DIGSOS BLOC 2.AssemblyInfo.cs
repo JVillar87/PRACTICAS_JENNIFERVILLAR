@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DIGSOS BLOC 2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25ee1b438e73072beb76ecce9eb8ab2e22074b39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3dfab23a8a8589b931df96488eceffcc669079f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("DIGSOS BLOC 2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DIGSOS BLOC 2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
