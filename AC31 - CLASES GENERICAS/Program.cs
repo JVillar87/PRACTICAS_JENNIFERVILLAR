@@ -1,65 +1,78 @@
-﻿public class Program
+﻿
+public class Program
 {
     public static void Main(string[] args)
     {
-        ApiGenerica<string> texto = new ApiGenerica<string>();
-        texto.AgregarElemento("Hola Mundo");
-        texto.AgregarElemento("Esto es una prueba");
-        texto.AgregarElemento("de API genérica");
-        texto.ActualizarElemento(2, "C#");
-        texto.ListarElemento(0); 
-        texto.ListarElemento(1); 
-        texto.BuscarElemento("C#");
+        ApiGenerica<Cliente> apiClientes = new ApiGenerica<Cliente>();
+        apiClientes.AgregarElemento(new Cliente { Nombre = "Juan", Email = "juan@example.com" });
+        apiClientes.AgregarElemento(new Cliente { Nombre = "Maria", Email = "maria@example.com" }); 
+        ApiGenerica<Productos> apiProductos = new ApiGenerica<Productos>();
+        apiProductos.AgregarElemento(new Productos { Nombre = "Laptop", Precio = 999.99F, Stock = 10 });
+        apiProductos.AgregarElemento(new Productos { Nombre = "Smartphone", Precio = 499.99F, Stock = 20 });
+        ApiGenerica<Empleados> apiEmpleados = new ApiGenerica<Empleados>();
+        apiEmpleados.AgregarElemento(new Empleados { Nombre = "Ana", Puesto = "Gerente", Antiguedad = 5});
+        Console.WriteLine("Clientes:");
+        apiClientes.MostrarElementos();
+        Console.WriteLine("Productos:");
+        apiProductos.MostrarElementos();
+        Console.WriteLine("Empleados:");
+        apiEmpleados.MostrarElementos();
 
-        
-        ApiGenerica<int> enteros = new ApiGenerica<int>();
-        enteros.AgregarElemento(10);
-        enteros.AgregarElemento(20);
-        enteros.AgregarElemento(30);
-        enteros.AgregarElemento(40);
-        enteros.ListarElemento(0); 
-        enteros.ListarElemento(1);
-        enteros.ListarElemento(2);
-        enteros.ListarElemento(3);
-        enteros.ActualizarElemento(0, 15);
-        enteros.ListarElemento(0);
-        enteros.BuscarElemento(20);
-    
     }
 }
 
 
+public class Cliente
+{
+    public required string Nombre { get; set; }
+    public required string Email { get; set; }
+
+    public override string ToString()
+    {
+        return $"Nombre: {Nombre}, Email: {Email}";
+    }
+}
+
+public class Productos
+{
+    public required string Nombre { get; set; }
+    public required int Stock { get; set; }
+    public required float Precio { get; set; }
+    public override string ToString()
+    {
+        return $"Nombre: {Nombre}, Precio: {Precio}";
+    }
+}
+
+public class Empleados
+{
+    public required string Nombre { get; set; }
+    public required string Puesto { get; set; }
+    public required int Antiguedad { get; set; }
+    public override string ToString()    {
+        return $"Nombre: {Nombre}, Puesto: {Puesto}, Antiguedad: {Antiguedad} años";
+    }
+}
+
 public class ApiGenerica<T>
 {
-    private List<T> elementos;
+    private List<T> Elementos;
 
     public ApiGenerica()
     {
-        elementos = new List<T>();
+     Elementos = new List<T>();
     }
 
     public void AgregarElemento(T elemento)
     {
-        elementos.Add(elemento);
+        Elementos.Add(elemento);
     }
 
     public void ActualizarElemento(int indice, T nuevoElemento)
     {
-        if (indice >= 0 && indice < elementos.Count)
+        if (indice >= 0 && indice < Elementos.Count)
         {
-            elementos[indice] = nuevoElemento;
-        }
-        else
-        {
-            Console.WriteLine("Fuera de rango");
-        }
-    }
-
-    public void ListarElemento(int indice)
-    {
-        if (indice >= 0 && indice < elementos.Count)
-        {
-            Console.WriteLine(elementos[indice]);
+            Elementos[indice] = nuevoElemento;
         }
         else
         {
@@ -69,7 +82,7 @@ public class ApiGenerica<T>
 
     public void BuscarElemento(T elemento)
     {
-        int indice = elementos.IndexOf(elemento);
+        int indice = Elementos.IndexOf(elemento);
         if (indice != -1)
         {
             Console.WriteLine($"Elemento '{elemento}' encontrado en {indice}.");
@@ -80,27 +93,25 @@ public class ApiGenerica<T>
         }
     }
 
-    
+    public T ObtenerElemento(int indice)
+    {
+        if (indice >= 0 && indice < Elementos.Count)
+        {
+            return Elementos[indice];
+        }
+        else
+        {
+            Console.WriteLine("Error! fuera de rango, devuelvo el primer elemento de la lista");
+            return Elementos[0];
+        }
+    }
 
-//     public T ObtenerElemento(int indice)
-//     {
-//         if (indice >= 0 && indice < elementos.Count)
-//         {
-//             return elementos[indice];
-//         }
-//         else
-//         {
-//             Console.WriteLine("Error! fuera de rango, devuelvo el primer elemento de la lista");
-//             return elementos[0];
-//         }
-//     }
-
-//     public void MostrarElementos()
-//     {
-//         Console.WriteLine("Elementos almacenados:");
-//         foreach (var elemento in elementos)
-//         {
-//             Console.WriteLine(elemento);
-//         }
-//     }
+    public void MostrarElementos()
+    {
+        Console.WriteLine("Elementos almacenados:");
+        foreach (var elemento in Elementos)
+        {
+            Console.WriteLine(elemento);
+        }
+    }
 }
