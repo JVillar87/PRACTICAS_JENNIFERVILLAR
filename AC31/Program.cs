@@ -22,7 +22,7 @@ internal class Program
             }
             else
             {
-                Console.WriteLine("Error: Unable to retrieve starship data.");
+                Console.WriteLine("Error: No hay información sobre la nave espacial.");
                 break;
             }
             
