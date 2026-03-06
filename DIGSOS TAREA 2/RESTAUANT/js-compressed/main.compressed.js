@@ -1,1 +1,0 @@
-function show_popup_login(){let s=document.querySelector(".popup-login");s.classList.contains("active")?s.classList.remove("active"):s.classList.add("active")}

@@ -16,7 +16,7 @@ static void Main()
     - Pasar mensajes locales a archivo (mensajes.txt)
     - Leer todos los mensajes de archivo
     *recuerda el método .Split de los strings.*/
-       
+
         AddLocalMessage(mensajesLocales);
         AddLocalMessage(mensajesLocales);
         
@@ -47,7 +47,7 @@ static void Main()
     almacenar los libros del archivo y ordenarlos con sort.*/
 
         string archivo = "libros.txt";
-        int opcion;
+        int option;
 
         do
         {
@@ -57,9 +57,9 @@ static void Main()
             Console.WriteLine("3. Salir");
             Console.Write("Seleccione una opción: ");
             
-            if (!int.TryParse(Console.ReadLine(), out opcion)) continue;
+            if (!int.TryParse(Console.ReadLine(), out option)) continue;
 
-            switch (opcion)
+            switch (option)
             {
                 case 1:
                     NuevoLibro(archivo);
@@ -74,7 +74,7 @@ static void Main()
                     Console.WriteLine("Opción no válida.");
                     break;
         }
-    } while (opcion != 3);
+    } while (option != 3);
 }
 
     private static void NuevoLibro(string archivo)
@@ -84,7 +84,7 @@ static void Main()
 
         do
         {
-            Console.WriteLine("\nIntroduce los datos del libro:");
+            Console.WriteLine("Introduce los datos del libro:");
             Console.Write("Título: ");
             string? titulo = Console.ReadLine();
             Console.Write("Autor: ");
@@ -166,7 +166,7 @@ static void Main()
     //Funciones para el ejercicio 1
     static void AddLocalMessage(List<string> mensajesLocales)
     {
-        Console.WriteLine("Escribe un mensaje (usuario;asunto;mensaje):");
+        Console.WriteLine("Escribe un mensaje (usuario; asunto; mensaje):");
             string? entrada = Console.ReadLine();
             if (entrada != null)
         {
@@ -222,7 +222,11 @@ static void Main()
 
     static void ReadAllMessagesFromFile()
     {
-        if (!File.Exists(rutaArchivo)) return;
+        if (!File.Exists(rutaArchivo))
+        {
+            Console.WriteLine("El archivo no existe.");
+            return;
+        }
 
         using (StreamReader files = new StreamReader(rutaArchivo))
         {
