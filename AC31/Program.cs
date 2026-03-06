@@ -15,14 +15,15 @@ internal class Program
 
         do
         {
-            if (starships == null)
+            if (starships != null && starships.result != null && starships.result.properties != null)
             {
-                Console.WriteLine("Está en el mar");
-                Thread.Sleep(2000); 
-            } else
+                Console.WriteLine($"NAME: {starships.result.properties.name}, MODEL: {starships.result.properties.model}, MANUFACTURER: {starships.result.properties.manufacturer}");
+                Thread.Sleep(2000);
+            }
+            else
             {
-              Console.WriteLine($"NAME: {starships.result.properties.name}, MODEL: {starships.result.properties.model}, MANUFACTURER: {starships.result.properties.manufacturer}");
-              Thread.Sleep(2000);    
+                Console.WriteLine("Error: Unable to retrieve starship data.");
+                break;
             }
             
                         
