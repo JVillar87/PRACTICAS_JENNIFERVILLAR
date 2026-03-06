@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACION\\EJERCICIOS CLASES GENERICAS\\EJERCICIOS CLASES GENERICAS.csproj",
+      "projectUniqueName": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\AC31 - CLASES GENERICAS\\EJERCICIOS CLASES GENERICAS.csproj",
       "projectName": "EJERCICIOS CLASES GENERICAS",
-      "projectPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACION\\EJERCICIOS CLASES GENERICAS\\EJERCICIOS CLASES GENERICAS.csproj",
+      "projectPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\AC31 - CLASES GENERICAS\\EJERCICIOS CLASES GENERICAS.csproj",
       "packagesPath": "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\PRACTICAS_JENNIFERVILLAR\\PROGRAMACION\\EJERCICIOS CLASES GENERICAS\\obj\\",
+      "outputPath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\AC31 - CLASES GENERICAS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MSI-GF75thin\\AppData\\Roaming\\NuGet\\NuGet.Config"

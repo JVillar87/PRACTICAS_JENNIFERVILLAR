@@ -3,11 +3,10 @@
     public static void Main(string[] args)
     {
         ApiGenerica<string> texto = new ApiGenerica<string>();
-        texto.AgregarElemento("Hola");
-        texto.AgregarElemento("Mundo");
+        texto.AgregarElemento("Hola Mundo");
         texto.AgregarElemento("Esto es una prueba");
         texto.AgregarElemento("de API genérica");
-        texto.ActualizarElemento(3, "C#");
+        texto.ActualizarElemento(2, "C#");
         texto.ListarElemento(0); 
         texto.ListarElemento(1); 
         texto.BuscarElemento("C#");
