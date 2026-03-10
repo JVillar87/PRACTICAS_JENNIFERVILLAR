@@ -5,13 +5,20 @@ public class Program
     {
         ApiGenerica<Cliente> apiClientes = new ApiGenerica<Cliente>();
         apiClientes.AgregarElemento(new Cliente { Nombre = "Juan", Email = "juan@example.com" });
-        apiClientes.AgregarElemento(new Cliente { Nombre = "Maria", Email = "maria@example.com" }); 
+        apiClientes.AgregarElemento(new Cliente { Nombre = "Maria", Email = "maria@example.com" });
+        apiClientes.AgregarElemento(new Cliente { Nombre = "Laura", Email = "laura@example.com" });
+        apiClientes.AgregarElemento(new Cliente { Nombre = "Pedro", Email = "pablo@example.com"});
+        apiClientes.EliminarElemento(1);
         ApiGenerica<Productos> apiProductos = new ApiGenerica<Productos>();
         apiProductos.AgregarElemento(new Productos { Nombre = "Laptop", Precio = 999.99F, Stock = 10 });
         apiProductos.AgregarElemento(new Productos { Nombre = "Smartphone", Precio = 499.99F, Stock = 20 });
+        apiProductos.AgregarElemento(new Productos { Nombre = "Television", Precio = 399.99F, Stock = 15 });
+        apiProductos.EliminarElemento(2);
         ApiGenerica<Empleados> apiEmpleados = new ApiGenerica<Empleados>();
         apiEmpleados.AgregarElemento(new Empleados { Nombre = "Ana", Puesto = "Gerente", Antiguedad = 5});
         apiEmpleados.AgregarElemento(new Empleados { Nombre = "Carlos", Puesto = "Vendedor", Antiguedad = 2 });
+        apiEmpleados.AgregarElemento(new Empleados { Nombre = "Sofia", Puesto = "Asistente", Antiguedad = 10 });
+        apiEmpleados.EliminarElemento(1);
         Console.WriteLine("Clientes:");
         apiClientes.MostrarElementos();
         Console.WriteLine("Productos:");
@@ -27,6 +34,7 @@ public class Cliente
 {
     public required string Nombre { get; set; }
     public required string Email { get; set; }
+    
 
     public override string ToString()
     {
@@ -41,7 +49,7 @@ public class Productos
     public required float Precio { get; set; }
     public override string ToString()
     {
-        return $"Nombre: {Nombre}, Precio: {Precio}";
+        return $"Nombre: {Nombre}, Precio: {Precio}, Stock: {Stock}";
     }
 }
 
