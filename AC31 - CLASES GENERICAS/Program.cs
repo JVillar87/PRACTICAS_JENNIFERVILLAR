@@ -11,6 +11,7 @@ public class Program
         apiProductos.AgregarElemento(new Productos { Nombre = "Smartphone", Precio = 499.99F, Stock = 20 });
         ApiGenerica<Empleados> apiEmpleados = new ApiGenerica<Empleados>();
         apiEmpleados.AgregarElemento(new Empleados { Nombre = "Ana", Puesto = "Gerente", Antiguedad = 5});
+        apiEmpleados.AgregarElemento(new Empleados { Nombre = "Carlos", Puesto = "Vendedor", Antiguedad = 2 });
         Console.WriteLine("Clientes:");
         apiClientes.MostrarElementos();
         Console.WriteLine("Productos:");
@@ -93,6 +94,18 @@ public class ApiGenerica<T>
         }
     }
 
+    public void EliminarElemento(int indice)
+    {
+        if (indice >= 0 && indice < Elementos.Count)
+        {
+            Elementos.RemoveAt(indice);
+        }
+        else
+        {
+            Console.WriteLine("Fuera de rango");
+        }
+    }
+
     public T ObtenerElemento(int indice)
     {
         if (indice >= 0 && indice < Elementos.Count)
@@ -101,7 +114,7 @@ public class ApiGenerica<T>
         }
         else
         {
-            Console.WriteLine("Error! fuera de rango, devuelvo el primer elemento de la lista");
+            Console.WriteLine("Error! fuera de rango");
             return Elementos[0];
         }
     }
