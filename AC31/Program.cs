@@ -20,7 +20,7 @@ internal class Program
             if (starships.results[i].name != null)
             {
 
-                Console.WriteLine($"NAME: {starships.results[i].name}, UID: {starships.results[i].uid}");
+                Console.WriteLine($"|| NAME: {starships.results[i].name} || UID: {starships.results[i].uid} ||");
                 Thread.Sleep(2000);
             }
             else
