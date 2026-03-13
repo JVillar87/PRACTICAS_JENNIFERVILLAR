@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string url = "https://www.swapi.tech/api/starships/9"; //endpoint starships
+        string url = "https://www.swapi.tech/api/starships?page=2&limit=10"; //endpoint starships
 
         HttpClient client = new HttpClient();
 
@@ -15,23 +15,25 @@ internal class Program
 
         do
         {
-            if (starships != null && starships.result != null && starships.result.properties != null)
+
+            int i = 0;
+            for (i = 0; i < starships.results.Count; i++)
+            if (starships.results[i].name != null)
             {
-                Console.WriteLine($"NAME: {starships.result.properties.name}, MODEL: {starships.result.properties.model}, MANUFACTURER: {starships.result.properties.manufacturer}");
+
+                Console.WriteLine($"NAME: {starships.results[i].name}, MODEL: {starships.results[i].uid}");
                 Thread.Sleep(2000);
             }
             else
             {
-                Console.WriteLine("Error: No hay información sobre la nave espacial.");
-                break;
+                {
+                    Console.WriteLine("Error: No hay información sobre la nave espacial.");
+                    break;
+                }
             }
-            
-                        
+
+            i++;
+
         } while (true);
-
-
-
     }
-
-    
 }
