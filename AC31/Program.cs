@@ -15,13 +15,12 @@ internal class Program
 
         do
         {
-
             int i = 0;
             for (i = 0; i < starships.results.Count; i++)
             if (starships.results[i].name != null)
             {
 
-                Console.WriteLine($"NAME: {starships.results[i].name}, MODEL: {starships.results[i].uid}");
+                Console.WriteLine($"NAME: {starships.results[i].name}, UID: {starships.results[i].uid}");
                 Thread.Sleep(2000);
             }
             else
