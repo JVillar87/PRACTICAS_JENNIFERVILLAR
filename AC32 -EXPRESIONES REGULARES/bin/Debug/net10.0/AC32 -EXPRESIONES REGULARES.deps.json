@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "AC32 -EXPRESIONES REGULARES/1.0.0": {
+        "runtime": {
+          "AC32 -EXPRESIONES REGULARES.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AC32 -EXPRESIONES REGULARES/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
