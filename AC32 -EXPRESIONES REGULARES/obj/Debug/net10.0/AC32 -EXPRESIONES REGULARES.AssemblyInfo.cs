@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AC32 -EXPRESIONES REGULARES")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+421ea00dec1901dab97a8b89aa87aa185f5d1c26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e643d604a6dc9600d4a3f8f17f78a7718ce34e06")]
 [assembly: System.Reflection.AssemblyProductAttribute("AC32 -EXPRESIONES REGULARES")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AC32 -EXPRESIONES REGULARES")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

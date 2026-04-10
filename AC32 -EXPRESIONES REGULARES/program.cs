@@ -12,7 +12,7 @@ internal class Program
         string patternEmail = @"[A-Za-z0-9._%+-]+@[A-Za-z]+\.[A-Za-z]{2,}";
         var matchesEmail = Regex.Matches(texto, patternEmail);
         foreach (Match mail in matchesEmail)
-            Console.WriteLine($"Email encontrado: {mail.Value} en posición {mail.Index}");
+            Console.WriteLine($"Email encontrado: {mail.Value}");
 
         /*CON ESTE MÉTODO SOLO ENCONTRAMOS TODAS LAS COINCIDENCIAS*/
 
@@ -21,20 +21,20 @@ internal class Program
         Algunos ejemplos de números de teléfono son: 123-456-7890, +34-659-985-002, (555) 123-4567 o 975321753.
         En el ámbito de la programación, las expresiones regulares son útiles para validar y buscar patrones en números de teléfono.";
 
-        string patternPhone = @"\d{3}-\d{3}-\d{3,4}";
-
-        foreach (Match m in Regex.Matches(textPhone, patternPhone))
-            Console.WriteLine($"Teléfono válido: {m.Value}");
+        string patternPhone = @"\d{3}-\d{3}-\d{3}";
+        var matchesPhone = Regex.Matches(textPhone, patternPhone);
+        foreach (Match phone in matchesPhone)
+            Console.WriteLine($"Teléfono válido: {phone.Value}");
 
         /*UTILIZAMOS ESTE MÉTODO PARA ENCONTRAR TODAS LAS COINCIDENCIAS DE UN PATRÓN EN UNA CADENA DE TEXTO*/
-
 
         //Valida una fecha en formato día/ mes / año ej. 29 / 02 / 2024).
         string NewText = @"Las fechas son una parte fundamental de nuestra vida diaria. Una fecha consta de varias partes, como el día, el mes y el año.
         Algunos ejemplos de fechas son: 29/02/2024, 15/08/2023, 01-01-2022 o 31.12.2021.";
         string patternDate = @"\d{2}/\d{2}/\d{4}";
 
-        foreach (Match date in Regex.Matches(NewText, patternDate))
+        var matchesDate = Regex.Matches(NewText, patternDate);
+        foreach (Match date in matchesDate)
             Console.WriteLine($"Fecha encontrada: {date.Value}");
 
         /*UTILIZAMOS ESTE MÉTODO PARA ENCONTRAR TODAS LAS COINCIDENCIAS DE UN PATRÓN EN UNA CADENA DE TEXTO, IGUAL QUE EL ANTERIOR*/
@@ -71,7 +71,7 @@ internal class Program
         string TextPositive = @"Encontramos números en casi cualquier texto. Algunos ejemplos de números enteros positivos son: 123, 456789 o 987654321. 
         En el ámbito de la programación, las expresiones regulares son útiles para validar y buscar patrones en números enteros positivos.";
 
-        string patternINTpositive = @"[1-9]{9}";
+        string patternINTpositive = @"[1-9]\d{0,8}";
         foreach (Match INT in Regex.Matches(TextPositive, patternINTpositive))
         {
             Console.WriteLine($"{INT.Value} - Número entero positivo válido");
@@ -113,7 +113,7 @@ internal class Program
         string patternDecimal = @"\d+\.\d+";
         if (Regex.IsMatch(TextDecimal, patternDecimal))
         {
-            Console.WriteLine($"Número decimal válido: {TextDecimal}");
+            Console.WriteLine($"Número decimal válido: {Regex.Match(TextDecimal, patternDecimal).Value}");
         }
 
         /*REGRESAMOS AL IsMatch PARA VALIDAR UN NÚMERO DECIMAL CON PUNTO, YA QUE ES UNA FORMA EFECTIVA DE ENCONTRAR NÚMEROS DECIMALES EN EL TEXTO.*/
