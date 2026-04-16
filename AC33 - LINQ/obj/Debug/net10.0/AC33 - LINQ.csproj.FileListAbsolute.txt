@@ -1,0 +1,15 @@
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\bin\Debug\net10.0\AC33 - LINQ.exe
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\bin\Debug\net10.0\AC33 - LINQ.deps.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\bin\Debug\net10.0\AC33 - LINQ.runtimeconfig.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\bin\Debug\net10.0\AC33 - LINQ.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\bin\Debug\net10.0\AC33 - LINQ.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.AssemblyInfoInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.AssemblyInfo.cs
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.csproj.CoreCompileInputs.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.sourcelink.json
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\refint\AC33 - LINQ.dll
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.pdb
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\AC33 - LINQ.genruntimeconfig.cache
+C:\Users\MSI-GF75thin\Desktop\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\PRACTICAS\AC33 - LINQ\obj\Debug\net10.0\ref\AC33 - LINQ.dll
