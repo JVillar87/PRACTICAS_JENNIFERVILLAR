@@ -43,14 +43,8 @@
         var primerEmpleadoMayor30 = (from empleado in empleados
                                     where empleado.Edad > 30
                                     select empleado).FirstOrDefault();
-        if (primerEmpleadoMayor30 != null)
-        {
-            Console.WriteLine($"El primer empleado con más de 30 años es: {primerEmpleadoMayor30.Nombre} con {primerEmpleadoMayor30.Edad} años");
-        }
-        else
-        {
-            Console.WriteLine("No hay empleados con más de 30 años.");
-        }
+        Console.WriteLine($"El primer empleado con más de 30 años es: {primerEmpleadoMayor30?.Nombre} con {primerEmpleadoMayor30?.Edad} años");
+       
 
     //Selecciona los 2 primeros empleados
         var primerosDosEmpleados = empleados.Take(2);
