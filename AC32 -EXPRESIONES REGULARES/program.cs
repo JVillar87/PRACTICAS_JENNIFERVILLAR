@@ -9,7 +9,7 @@ internal class Program
         En el ámbito de la programación, las expresiones regulares son útiles para validar y buscar patrones en direcciones de correo electrónico.
         Las expresiones regulares se pueden utilizar en muchos lenguajes de programación, incluyendo C#, Python, JavaScript, Java…";
 
-        string patternEmail = @"[A-Za-z0-9._%+-]+@[A-Za-z]+\.[A-Za-z]{2,}";
+        string patternEmail = @"^[A-Za-z0-9._%+-]+@[A-Za-z]+\.[A-Za-z]{2,}";
         var matchesEmail = Regex.Matches(texto, patternEmail);
         foreach (Match mail in matchesEmail)
             Console.WriteLine($"Email encontrado: {mail.Value}");
@@ -21,7 +21,7 @@ internal class Program
         Algunos ejemplos de números de teléfono son: 123-456-7890, +34-659-985-002, (555) 123-4567 o 975321753.
         En el ámbito de la programación, las expresiones regulares son útiles para validar y buscar patrones en números de teléfono.";
 
-        string patternPhone = @"\d{3}-\d{3}-\d{3,4}";
+        string patternPhone = @"^\d{3}-\d{3}-\d{3,4}";
         var matchesPhone = Regex.Matches(textPhone, patternPhone);
         foreach (Match phone in matchesPhone)
             Console.WriteLine($"Teléfono válido: {phone.Value}");
@@ -31,7 +31,7 @@ internal class Program
         //Valida una fecha en formato día/ mes / año ej. 29 / 02 / 2024).
         string NewText = @"Las fechas son una parte fundamental de nuestra vida diaria. Una fecha consta de varias partes, como el día, el mes y el año.
         Algunos ejemplos de fechas son: 29/02/2024, 15/08/2023, 01-01-2022 o 31.12.2021.";
-        string patternDate = @"\d{2}/\d{2}/\d{4}";
+        string patternDate = @"^\d{2}/\d{2}/\d{4}";
 
         var matchesDate = Regex.Matches(NewText, patternDate);
         foreach (Match date in matchesDate)
@@ -53,7 +53,7 @@ internal class Program
         string TextPostalCode = @"Los códigos postales son una parte fundamental del sistema de correo. Un código postal consta de varias partes, como el número de zona, el número de distrito y el número de sector.
         Algunos ejemplos de códigos postales son: 12345, 54321 o 98765.";
 
-        string patternPostalCode = @"\b\d{5}\b";
+        string patternPostalCode = @"\d{5}";
         foreach (Match postalCode in Regex.Matches(TextPostalCode, patternPostalCode))
             Console.WriteLine($"Código postal encontrado: {postalCode.Value}");
 
