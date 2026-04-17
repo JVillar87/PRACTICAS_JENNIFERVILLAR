@@ -9,11 +9,13 @@ public class Program
         apiClientes.AgregarElemento(new Cliente { Nombre = "Laura", Email = "laura@example.com" });
         apiClientes.AgregarElemento(new Cliente { Nombre = "Pedro", Email = "pablo@example.com"});
         apiClientes.EliminarElemento(1);
+
         ApiGenerica<Productos> apiProductos = new ApiGenerica<Productos>();
         apiProductos.AgregarElemento(new Productos { Nombre = "Laptop", Precio = 999.99F, Stock = 10 });
         apiProductos.AgregarElemento(new Productos { Nombre = "Smartphone", Precio = 499.99F, Stock = 20 });
         apiProductos.AgregarElemento(new Productos { Nombre = "Television", Precio = 399.99F, Stock = 15 });
         apiProductos.EliminarElemento(2);
+        
         ApiGenerica<Empleados> apiEmpleados = new ApiGenerica<Empleados>();
         apiEmpleados.AgregarElemento(new Empleados { Nombre = "Ana", Puesto = "Gerente", Antiguedad = 5});
         apiEmpleados.AgregarElemento(new Empleados { Nombre = "Carlos", Puesto = "Vendedor", Antiguedad = 2 });

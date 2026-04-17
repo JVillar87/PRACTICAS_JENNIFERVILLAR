@@ -21,7 +21,7 @@ internal class Program
         Algunos ejemplos de números de teléfono son: 123-456-7890, +34-659-985-002, (555) 123-4567 o 975321753.
         En el ámbito de la programación, las expresiones regulares son útiles para validar y buscar patrones en números de teléfono.";
 
-        string patternPhone = @"\d{3}-\d{3}-\d{3}";
+        string patternPhone = @"\d{3}-\d{3}-\d{3,4}";
         var matchesPhone = Regex.Matches(textPhone, patternPhone);
         foreach (Match phone in matchesPhone)
             Console.WriteLine($"Teléfono válido: {phone.Value}");

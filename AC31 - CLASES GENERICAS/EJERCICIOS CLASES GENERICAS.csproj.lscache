@@ -15,18 +15,18 @@ primary
 lastDtbSucceeded
 
 [properties]
-AssemblyName=AC32 -EXPRESIONES REGULARES
+AssemblyName=EJERCICIOS CLASES GENERICAS
 CommandLineArgsForDesignTimeEvaluation=-langversion:14.0 -define:TRACE
 CompilerGeneratedFilesOutputPath=
 MaxSupportedLangVersion=14.0
 ProjectAssetsFile=<PATH>obj/project.assets.json
-RootNamespace=AC32__EXPRESIONES_REGULARES
+RootNamespace=EJERCICIOS_CLASES_GENERICAS
 RunAnalyzers=
 RunAnalyzersDuringLiveAnalysis=
 SolutionPath=*Undefined*
 TargetFrameworkIdentifier=.NETCoreApp
-TargetPath=<PATH>bin/Debug/net10.0/AC32 -EXPRESIONES REGULARES.dll
-TargetRefPath=<PATH>obj/Debug/net10.0/ref/AC32 -EXPRESIONES REGULARES.dll
+TargetPath=<PATH>bin/Debug/net10.0/EJERCICIOS CLASES GENERICAS.dll
+TargetRefPath=<PATH>obj/Debug/net10.0/ref/EJERCICIOS CLASES GENERICAS.dll
 TemporaryDependencyNodeTargetIdentifier=net10.0
 
 [commandLineArguments]
@@ -46,8 +46,8 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 /debug:portable
 /filealign:512
 /optimize-
-/out:"obj\Debug\net10.0\AC32 -EXPRESIONES REGULARES.dll"
-/refout:"obj\Debug\net10.0\refint\AC32 -EXPRESIONES REGULARES.dll"
+/out:"obj\Debug\net10.0\EJERCICIOS CLASES GENERICAS.dll"
+/refout:"obj\Debug\net10.0\refint\EJERCICIOS CLASES GENERICAS.dll"
 /target:exe
 /warnaserror-
 /utf8output
@@ -58,9 +58,9 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 [sourceFiles]
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
- AC32 -EXPRESIONES REGULARES.AssemblyInfo.cs
- AC32 -EXPRESIONES REGULARES.GlobalUsings.g.cs
-program.cs
+ EJERCICIOS CLASES GENERICAS.AssemblyInfo.cs
+ EJERCICIOS CLASES GENERICAS.GlobalUsings.g.cs
+Program.cs
 
 [metadataReferences]
 <DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.6/ref/net10.0/
@@ -246,4 +246,4 @@ program.cs
 
 [analyzerConfigFiles]
 <DOTNET>/sdk/10.0.106/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_10_default.globalconfig
-obj/Debug/net10.0/AC32 -EXPRESIONES REGULARES.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/net10.0/EJERCICIOS CLASES GENERICAS.GeneratedMSBuildEditorConfig.editorconfig
