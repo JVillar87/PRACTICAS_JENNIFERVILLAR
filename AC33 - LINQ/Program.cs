@@ -57,7 +57,7 @@
         //Selecciona el primer empleado que tenga más de 30 años
         var primerEmpleadoMayor30 = (from empleado in empleados
                                      where empleado.Edad > 30
-                                     select empleado).FirstOrDefault();
+                                     select empleado).First();
         Console.WriteLine($"El primer empleado con más de 30 años es: {primerEmpleadoMayor30?.Nombre} con {primerEmpleadoMayor30?.Edad} años");
 
 

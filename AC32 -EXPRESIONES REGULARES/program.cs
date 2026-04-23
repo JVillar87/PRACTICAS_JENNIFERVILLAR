@@ -31,7 +31,7 @@ internal class Program
         //Valida una fecha en formato día/ mes / año ej. 29 / 02 / 2024).
         string NewText = @"Las fechas son una parte fundamental de nuestra vida diaria. Una fecha consta de varias partes, como el día, el mes y el año.
         Algunos ejemplos de fechas son: 29/02/2024, 15/08/2023, 01-01-2022 o 31.12.2021.";
-        string patternDate = @"^\d{2}/\d{2}/\d{4}";
+        string patternDate = @"\d{2}/\d{2}/\d{4}";
 
         var matchesDate = Regex.Matches(NewText, patternDate);
         foreach (Match date in matchesDate)
