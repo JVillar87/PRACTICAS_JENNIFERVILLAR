@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "iUE8lCvtkx4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MSI-GF75thin\\Desktop\\PRATICAS GITHUB(Sistemas 0483-Program 0485-Entorns 0487)\\PRACTICAS\\A34 - SQLite\\A34 - SQLite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
+    "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.119\\stub.system.data.sqlite.core.netstandard.1.0.119.nupkg.sha512",
+    "C:\\Users\\MSI-GF75thin\\.nuget\\packages\\system.data.sqlite.core\\1.0.119\\system.data.sqlite.core.1.0.119.nupkg.sha512"
+  ],
+  "logs": []
+}
